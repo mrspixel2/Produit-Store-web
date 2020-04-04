@@ -1,0 +1,4 @@
+services:
+#    espace_client.example:
+#        class: EspaceClientBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

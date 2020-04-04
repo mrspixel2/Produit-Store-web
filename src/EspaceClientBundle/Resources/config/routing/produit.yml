@@ -1,0 +1,24 @@
+Espace_index:
+    path:     /
+    defaults: { _controller: "EspaceClientBundle:Produit:index" }
+    methods:  GET
+
+Espace_show:
+    path:     /{idvelo}/show
+    defaults: { _controller: "EspaceClientBundle:Produit:show" }
+    methods:  GET
+
+Espace_new:
+    path:     /new
+    defaults: { _controller: "EspaceClientBundle:Produit:new" }
+    methods:  [GET, POST]
+
+Espace_edit:
+    path:     /{idvelo}/edit
+    defaults: { _controller: "EspaceClientBundle:Produit:edit" }
+    methods:  [GET, POST]
+
+Espace_delete:
+    path:     /{idvelo}/delete
+    defaults: { _controller: "EspaceClientBundle:Produit:delete" }
+    methods:  DELETE

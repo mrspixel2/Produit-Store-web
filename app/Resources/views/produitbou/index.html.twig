@@ -1,0 +1,428 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!--Shop meta-->
+    <ul class="tz-ecommerce-meta pull-right">
+        <li class="tz-menu-wishlist">
+            <a href="#"><strong>0</strong></a>
+        </li>
+        <li class="tz-mini-cart">
+            <a href="shop-cart.html"><strong>2</strong>Cart : $199.00</a>
+
+            <!--Mini cart-->
+            <ul class="cart-inner">
+                <li class="mini-cart-content">
+                    <div class="mini-cart-img"><img src="images/product/product-cart1.png" alt="product search one"></div>
+                    <div class="mini-cart-ds">
+                        <h6><a href="single-product.html">Liv Race Day Short</a></h6>
+                        <span class="mini-cart-meta">
+                                        <a href="single-product.html">$2650.00</a>
+                                        <span class="mini-meta">
+                                           <span class="mini-color">Color: <i class="orange"></i></span>
+                                           <span class="mini-qty">Qty: 5</span>
+                                        </span>
+                                    </span>
+                    </div>
+                    <span class="mini-cart-delete"><img src="images/delete.png" alt="delete"></span>
+                </li>
+                <li class="mini-cart-content">
+                    <div class="mini-cart-img"><img src="images/product/product-cart2.png" alt="product search one"></div>
+                    <div class="mini-cart-ds">
+                        <h6><a href="single-product.html">City Pedals Sport</a></h6>
+                        <span class="mini-cart-meta">
+                                        <a href="single-product.html">$2650.00</a>
+                                        <span class="mini-meta">
+                                           <span class="mini-color">Color: <i class="orange"></i></span>
+                                           <span class="mini-qty">Qty: 5</span>
+                                        </span>
+                                    </span>
+                    </div>
+                    <span class="mini-cart-delete"><img src="images/delete.png" alt="delete"></span>
+                </li>
+                <li class="mini-cart-content">
+                    <div class="mini-cart-img"><img src="images/product/product-cart3.png" alt="product search one"></div>
+                    <div class="mini-cart-ds">
+                        <h6><a href="single-product.html">Gloss</a></h6>
+                        <span class="mini-cart-meta">
+                                        <a href="single-product.html">$2650.00</a>
+                                        <span class="mini-meta">
+                                           <span class="mini-color">Color: <i class="orange"></i></span>
+                                           <span class="mini-qty">Qty: 5</span>
+                                        </span>
+                                    </span>
+                    </div>
+                    <span class="mini-cart-delete"><img src="images/delete.png" alt="delete"></span>
+                </li>
+                <li class="mini-subtotal">
+                                <span class="subtotal-content">
+                                    Subtotal:
+                                    <strong class="pull-right">$1,100.00</strong>
+                                </span>
+                </li>
+                <li class="mini-footer">
+                    <a href="shop-cart.html" class="view-cart">View Cart</a>
+                    <a href="shop-checkout.html" class="check-out">Checkout</a>
+                </li>
+            </ul>
+            <!--End mini cart-->
+
+        </li>
+    </ul>
+    <!--End Shop meta-->
+
+    <!--navigation mobi-->
+    <button data-target=".nav-collapse" class="btn-navbar tz_icon_menu" type="button">
+        <i class="fa fa-bars"></i>
+    </button>
+    <!--End navigation mobi-->
+    </div>
+    </nav>
+    <!--End stat main menu-->
+
+    </header>
+    <!--End id tz header-->
+
+    <!--Start shop-->
+    <div class="tz-shop">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-9">
+
+                    <!--Start shop content-->
+                    <div class="tz-shop-content">
+
+                        <!--Start breadcrumbs-->
+                        <ul class="tz-breadcrumbs">
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li class="current">
+                                Category
+                            </li>
+                        </ul>
+                        <!--End breadcrumbs-->
+
+                        <!--Shop banner-->
+                        <div class="shop-banner">
+                            <img src="images/product/banner.jpg" alt="banner">
+                        </div>
+                        <!--End shop banner-->
+
+                        <!--Catalog meta-->
+                        <div class="catalog-meta">
+                            <div class="catalog_top">
+
+                                <!--Button contro-->
+                                <span class="style-switch">
+                                    <a class="nav-grid-view fa fa-th-large active"></a>
+                                    <a class="nav-list-view fa fa-list"></a>
+                                </span>
+                                <!--End button contro-->
+
+                                <!--Shop order-->
+                                <form class="shop-order" method="post">
+                                    <label class="form-arrow">
+                                        <select class="number-item" name="number_item">
+                                            <option value="12">12 items/page</option>
+                                            <option value="6">6 items/page</option>
+                                            <option value="3">3 items/page</option>
+                                        </select>
+                                    </label>
+                                    <th> {{ knp_pagination_sortable(produitbous,'Trier par Nom','pb.Nom')}}</th>
+                                    <th> {{ knp_pagination_sortable(produitbous,'Trier par Prix','pb.prix')}}</th>
+
+                                    <input type="text" class="tz-query" id="tz-query" name="search" placeholder="Rechercher avec nom Store">
+                                    <button type="submit"></button>
+                                </form>
+                                <!--End shop order-->
+
+                            </div>
+                        </div>
+                        <!--End catalog meta-->
+                        {% for produitbou in produitbous %}
+                        <!--Product-->
+                        <div class="tz-product row grid-eff">
+
+                            <!--Product item-->
+                            <div class="product-item col-md-4 col-sm-6">
+                                <div class="item">
+                                    <div class="product-item-inner">
+                                        <div class="product-thumb">
+                                            <img src="{{ asset('images/'~produitbou.image) }}" alt="{{ produitbou.nom }}">
+                                        </div>
+                                        <div class="product-info">
+                                            <h4><a href="{{ path('produitbou_afficher', { 'id': produitbou.id }, 'afficher') }}">{{ produitbou.nom }}</a></h4>
+                                            <span class="p-meta">
+                                                <span class="p-price">${{ produitbou.prix }}</span>
+                                                <span class="p-vote">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star-half-o"></i>
+                                                </span>
+                                            </span>
+                                            <span class="p-color">
+                                                 <i class="fa fa-circle light-blue"></i>
+                                                <i class="fa fa-circle orange"></i>
+                                                <i class="fa fa-circle blueviolet"></i>
+                                                <i class="fa fa-circle orange-dark"></i>
+                                                <i class="fa fa-circle steelblue"></i>
+                                            </span>
+                                            <p>
+                                                {{ produitbou.description }}.
+                                            </p>
+                                            <span class="p-mask">
+                                                <a href="shop-cart.html" class="add-to-cart">Add to cart</a>
+                                                <a href="#" class="add-to-wishlist"><i class="fa fa-heart"></i> Add to wishlist</a>
+                                               <span class="quick-view">
+                                                    <a href="{{ path('produitbou_afficher', { 'id': produitbou.id }) }}"><i class="fa fa-eye"></i> Quick view</a>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--End product item-->
+
+
+                        </div>
+                        <!--End product-->
+                        {% endfor %}
+
+                        <!--Pagination-->
+                        <div class="navigation text-center">
+                            {{ knp_pagination_render(produitbous) }}
+                        </div>
+                        <!--End Pagination-->
+
+                    </div>
+                    <!--End shop content-->
+
+                </div>
+
+                <div class="col-md-3">
+                    <!--Start for shop sidebar-->
+                    <div class="tz-shop-sidebar">
+                        <aside class="widget widget_product_categories">
+                            <h3 class="widget-title">Bikes product</h3>
+                            <ul class="product-categories">
+                                <li>
+                                    <a href="shop.html">On-Road</a>
+                                </li>
+                                <li class="cat-parent">
+                                    <a href="shop.html">X-Road</a>
+                                    <ul class="children">
+                                        <li>
+                                            <a href="shop.html">Aero Race <span>(3)</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="shop.html">City <span>(3)</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="shop.html">Comfort<span>(1)</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="shop.html">Cruiser<span>(1)</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="shop.html">Endurance <span>(4)</span></a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="shop.html">Off-Road</a>
+                                </li>
+                                <li>
+                                    <a href="shop.html">BMX</a>
+                                </li>
+                            </ul>
+                        </aside>
+                        <aside class="product-catlog widget">
+                            <h3 class="widget-title">Catalog</h3>
+                            <div class="widget_price_filter">
+                                <h4 class="widget-title-children">
+                                    Price Filter
+                                </h4>
+                                <form>
+                                    <div id="slider-range"></div>
+                                    <div class="price_label">
+                                        <button type="submit" class="button">Filter</button>
+                                        <span class="value-price">
+                                    <span class="from"></span>
+                                     -
+                                    <span class="to"></span>
+                                </span>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="widget_color_filter">
+                                <h4 class="widget-title-children">
+                                    Color filter
+                                </h4>
+                                <ul>
+                                    <li>
+                                        <a href="shop.html" class="light-blue"></a>
+                                    </li>
+                                    <li>
+                                        <a href="shop.html" class="orange"></a>
+                                    </li>
+                                    <li>
+                                        <a href="shop.html" class="blueviolet"></a>
+                                    </li>
+                                    <li>
+                                        <a href="shop.html" class="orange-dark"></a>
+                                    </li>
+                                    <li>
+                                        <a href="shop.html" class="steelblue"></a>
+                                    </li>
+                                    <li>
+                                        <a href="shop.html" class="red-light"></a>
+                                    </li>
+                                    <li>
+                                        <a href="shop.html" class="cyan-dark"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="widget-size-filter">
+                                <h4 class="widget-title-children">
+                                    Size Filter
+                                </h4>
+                                <ul>
+                                    <li>
+                                        <a href="shop.html">S - Small  <span>(24)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="shop.html">M - Medium  <span>(18)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="shop.html">L - Large <span>(9)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="shop.html"> XL - Extra Large <span>(39)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="shop.html">xtra Extra Large  <span>(24)</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="widget-size-filter">
+                                <h4 class="widget-title-children">
+                                    Brand Filter
+                                </h4>
+                                <ul>
+                                    <li>
+                                        <a href="shop.html">S - Small  <span>(24)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="shop.html">M - Medium  <span>(18)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="shop.html">L - Large <span>(9)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="shop.html"> XL - Extra Large <span>(39)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="shop.html">xtra Extra Large  <span>(24)</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </aside>
+                        <aside class="widget widget_product">
+                            <h3 class="widget-title">Featured product</h3>
+                            <ul>
+                                <li>
+                                    <a href="shop.html">
+                                        <img src="images/product/widget1.jpg" alt="Defy Advanced">
+                                        <div class="item-info">
+                                            <h5>Defy Advanced</h5>
+                                            <span class="p-vote">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-half-o"></i>
+                                    </span>
+                                            <span class="price">$256.00</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="shop.html">
+                                        <img src="images/product/widget2.jpg" alt="Defy Advanced">
+                                        <div class="item-info">
+                                            <h5>Liv Race Day Short</h5>
+                                            <span class="p-vote">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-half-o"></i>
+                                    </span>
+                                            <span class="price">$256.00</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="shop.html">
+                                        <img src="images/product/widget3.jpg" alt="Defy Advanced">
+                                        <div class="item-info">
+                                            <h5>City Pedals Sport</h5>
+                                            <span class="p-vote">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-half-o"></i>
+                                    </span>
+                                            <span class="price">$256.00</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="shop.html">
+                                        <img src="images/product/widget4.jpg" alt="Defy Advanced">
+                                        <div class="item-info">
+                                            <h5>Gloss</h5>
+                                            <span class="p-vote">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-half-o"></i>
+                                    </span>
+                                            <span class="price">$256.00</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="shop.html">
+                                        <img src="images/product/widget5.jpg" alt="Defy Advanced">
+                                        <div class="item-info">
+                                            <h5>Cruiser Bells</h5>
+                                            <span class="p-vote">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-half-o"></i>
+                                    </span>
+                                            <span class="price">$256.00</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </aside>
+                    </div>
+                    <!--End shop sidebar-->
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--End Shop-->
+
+{% endblock %}

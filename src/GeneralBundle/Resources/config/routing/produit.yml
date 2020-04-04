@@ -1,0 +1,46 @@
+Produit_index:
+  path:     /
+  defaults: { _controller: "GeneralBundle:Produitbou:index" }
+  methods:  GET
+
+Produit_show:
+  path:     /{idvelo}/show
+  defaults: { _controller: "GeneralBundle:Produitbou:show" }
+  methods:  GET
+
+Produit_afficher:
+   path: /{idvelo}/afficherP
+   defaults: { _controller: "GeneralBundle:Produitbou:afficherP" }
+   methods: GET
+
+Produit_new:
+  path:     /new
+  defaults: { _controller: "GeneralBundle:Produitbou:new" }
+  methods:  [GET, POST]
+
+Produit_ajouter:
+  path:     /ajouter
+  defaults: { _controller: "GeneralBundle:Produitbou:ajouterProduit" }
+  methods:  [GET, POST]
+
+Produit_edit:
+  path:     /{idvelo}/edit
+  defaults: { _controller: "GeneralBundle:Produitbou:edit" }
+  methods:  [GET, POST]
+
+Produit_delete:
+  path:     /{id}/delete
+  defaults: { _controller: "GeneralBundle:Produitbou:delete" }
+  methods:  DELETE
+
+Produit_bystore:
+  path: /searchbystore
+  defaults: { _controller: "GeneralBundle:Produitbou:ProductsByStore" }
+  methods: GET
+
+produit_enrepture:
+  path: /repture
+  defaults: { _controller: "GeneralBundle:Produitbou:produitsEnReptureDeStock"}
+  methods: GET
+
+

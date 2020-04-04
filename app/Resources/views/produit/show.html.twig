@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Produit</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Idvelo</th>
+                <td>{{ produit.idvelo }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ produit.nom }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ produit.description }}</td>
+            </tr>
+            <tr>
+                <th>Prix</th>
+                <td>{{ produit.prix }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td>{{ produit.image }}</td>
+            </tr>
+            <tr>
+                <th>Etat</th>
+                <td>{{ produit.etat }}</td>
+            </tr>
+            <tr>
+                <th>Localisation</th>
+                <td>{{ produit.localisation }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{{ produit.date }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ produit.email }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('Espace_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('Espace_edit', { 'idvelo': produit.idvelo }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,7 @@
+produitbou_Espace:
+  resource: "@GeneralBundle/Resources/config/routing/produit.yml"
+  prefix:   /produit
+
+produitbou_homepage:
+  path:     /
+  defaults: { _controller: GeneralBundle:Default:index }

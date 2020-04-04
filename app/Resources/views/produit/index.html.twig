@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Produits list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Idvelo</th>
+                <th>Nom</th>
+                <th>Description</th>
+                <th>Prix</th>
+                <th>Image</th>
+                <th>Etat</th>
+                <th>Localisation</th>
+                <th>Date</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for produit in produits %}
+            <tr>
+                <td><a href="{{ path('Espace_show', { 'idvelo': produit.idvelo }) }}">{{ produit.idvelo }}</a></td>
+                <td>{{ produit.nom }}</td>
+                <td>{{ produit.description }}</td>
+                <td>{{ produit.prix }}</td>
+                <td>{{ produit.image }}</td>
+                <td>{{ produit.etat }}</td>
+                <td>{{ produit.localisation }}</td>
+                <td>{{ produit.date }}</td>
+                <td>{{ produit.email }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('Espace_show', { 'idvelo': produit.idvelo }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('Espace_edit', { 'idvelo': produit.idvelo }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('Espace_new') }}">Create a new produit</a>
+        </li>
+    </ul>
+{% endblock %}

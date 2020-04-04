@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div style="display: flex;justify-content: space-around;">
+
+        <a href="{{ path('produitbou_new') }}" style=" width: 50%">
+            <button type="button" class="btn btn-success " style=" width:100%;margin: 10px 0;" > Ajouter Produit</button>
+        </a>
+
+    </div>
+
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Reference</th>
+            <th scope="col">Libelle</th>
+            <th scope="col">Quantite</th>
+            <th scope="col">Prix</th>
+            <th scope="col">Categorie</th>
+            <th scope="col">Action</th>
+            <th scope="col">Image</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for produit in produits %}
+            <tr>
+                <th scope="row">{{produit.id}}</th>
+
+
+                <td>{{produit.prix}}</td>
+
+
+                <td>
+                    <a  class="btn btn-outline-dark" href="{{ path('produitbou_edit', { 'id': produit.id }) }}">Edit</a>
+                    <a class="btn btn-outline-danger"  href="{{ path('produitbou_delete', { 'id': produit.id }) }}"> Delete </a>
+                </td>
+                <td><img src="{{ asset('produit/uploads/images/' ~ produit.image ) }} " width="60px" height="50px" /> </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {# display navigation #}
+    <div class="navigation">
+        {{ knp_pagination_render(produits) }}
+    </div>
+
+{% endblock %}
+

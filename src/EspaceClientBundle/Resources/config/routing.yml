@@ -1,0 +1,7 @@
+espace_client_Espace:
+    resource: "@EspaceClientBundle/Resources/config/routing/produit.yml"
+    prefix:   /Espace
+
+espace_client_homepage:
+    path:     /
+    defaults: { _controller: EspaceClientBundle:Default:index }

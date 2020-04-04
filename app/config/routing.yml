@@ -1,0 +1,22 @@
+general_store:
+    resource: "@GeneralBundle/Controller/StoreController.php"
+    type:     annotation
+
+general_produitbou:
+    resource: "@GeneralBundle/Controller/ProduitbouController.php"
+    type:     annotation
+
+espace_client:
+    resource: "@EspaceClientBundle/Resources/config/routing.yml"
+    prefix:   /
+
+general:
+    resource: "@GeneralBundle/Controller/"
+    type:     annotation
+    prefix:   /general
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
