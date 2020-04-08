@@ -20,14 +20,20 @@ class StoreController extends Controller
      * @Route("/", name="store_index")
      * @Method("GET")
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
-        $stores = $em->getRepository('GeneralBundle:Store')->findAll();
-
+        // $stores = $em->getRepository('GeneralBundle:Store')->findAll();
+        $stores = $this->getUser()->getStores();
+        $paginator= $this->get('knp_paginator');
+        $result=$paginator->paginate(
+            $stores,
+            $request->query->getInt('page', 1), /*page number*/
+            $request->query->getInt('limit',5) /*limit per page*/
+        );
         return $this->render('store/index.html.twig', array(
-            'stores' => $stores,
+            'stores' => $result,
         ));
     }
 
@@ -44,6 +50,7 @@ class StoreController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $store->setOwner($this->getUser());
             $em = $this->getDoctrine()->getManager();
             $em->persist($store);
             $em->flush();
@@ -117,6 +124,7 @@ class StoreController extends Controller
 
         return $this->redirectToRoute('store_index');
     }
+
 
     /**
      * Creates a form to delete a store entity.

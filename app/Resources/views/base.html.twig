@@ -61,7 +61,7 @@
                 </ul>
                 <ul class="pull-right">
                     <li>
-                        <a href="shop-register.html">My Account   </a>
+                        <a href="{{ path('fos_user_profile_edit') }}">My Account   </a>
                     </li>
                     <li>
                         <a href="#">Wishlist</a>
@@ -75,21 +75,21 @@
                     <li class="tz-header-login">
                         <a href="#">Login</a>
                         <div class="tz-login-form">
-                            <form>
+                            <form action="{{ path("fos_user_security_check") }}" method="POST">
                                 <p class="form-content">
                                     <label for="username">Username / Email</label>
-                                    <input type="text" name="username" id="username" value="">
+                                    <input type="text" id="username" name="_username" required="required" autocomplete="username">
                                 </p>
                                 <p class="form-content">
                                     <label for="password">Password</label>
-                                    <input type="password" name="username" id="password" value="">
+                                    <input type="password" id="password" name="_password" required="required" autocomplete="current-password" >
                                 </p>
                                 <p class="form-footer">
                                     <a href="#">Lost Password?</a>
-                                    <button type="submit" class="pull-right button_class">LOGIN</button>
+                                    <button type="submit" class="pull-right button_class" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}">LOGIN</button>
                                 </p>
                                 <p class="form-text">
-                                    Don't have an account? <a href="shop-register.html">Register Here</a>
+                                    Don't have an account? <a href="{{ path('fos_user_registration_register') }}">Register Here</a>
                                 </p>
                             </form>
                         </div>
@@ -346,7 +346,7 @@
                                     <h3 class="widget-title">MY ACCOUNT </h3>
                                     <ul>
                                         <li>
-                                            <a href="#">My Account </a>
+                                            <a href="{{ path('fos_user_profile_show') }}">My Account </a>
                                         </li>
                                         <li>
                                             <a href="#">Order History</a>

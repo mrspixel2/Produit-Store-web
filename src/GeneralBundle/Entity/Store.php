@@ -129,5 +129,12 @@ class Store
     {
         return $this->description;
     }
+
+    public function __toString()
+    {
+        return "";
+    }
+
+
 }
 

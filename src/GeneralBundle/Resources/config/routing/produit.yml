@@ -13,10 +13,6 @@ Produit_afficher:
    defaults: { _controller: "GeneralBundle:Produitbou:afficherP" }
    methods: GET
 
-Produit_new:
-  path:     /new
-  defaults: { _controller: "GeneralBundle:Produitbou:new" }
-  methods:  [GET, POST]
 
 Produit_ajouter:
   path:     /ajouter

@@ -3,6 +3,7 @@
 namespace GeneralBundle\Controller;
 
 use GeneralBundle\Entity\Produitbou;
+use GeneralBundle\Form\ProduitbouType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
@@ -78,42 +79,15 @@ class ProduitbouController extends Controller
     }
 
     /**
-     * Creates a new produitbou entity.
      *
-     * @Route("/new", name="produitbou_new")
-     * @Method({"GET", "POST"})
+     * @Route("/ajouter")
+     * @Method("POST")
      */
-    public function newAction(Request $request)
-    {
-        $produitbou = new Produitbou();
-        $form = $this->createForm('GeneralBundle\Form\ProduitbouType', $produitbou);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            /** @var UploadedFile $file */
-            $file = $produitbou->getImage();
-            $filename = md5(uniqid()).'.'.$file->guessExtension();
-            $file->move(
-                $this->getParameter('image_directory'),$filename
-            );
-            $produitbou->setImage($filename);
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($produitbou);
-            $em->flush();
-
-            return $this->redirectToRoute('produitbou_show', array('id' => $produitbou->getId()));
-        }
-
-        return $this->render('produitbou/new.html.twig', array(
-            'produitbou' => $produitbou,
-            'form' => $form->createView(),
-        ));
-    }
-
     public function ajouterProduitAction(Request $request)
     {
         $produit=new Produitbou();
-        $form=$this->createForm(ProduitbouType::class,$produit);
+        $user = $this->getUser();
+        $form=$this->createForm(ProduitbouType::class,$produit,array('user' => $this->getUser(),));
         $form->handleRequest($request);
         if($form->isSubmitted())
         {
@@ -127,7 +101,7 @@ class ProduitbouController extends Controller
             $em=$this->getDoctrine()->getManager();
             $em->persist($produit);
             $em->flush();
-            return $this->redirectToRoute('produitbou_show',  array('id' => $produit->getId()));
+            return $this->redirectToRoute('produitbou_afficher',  array('id' => $produit->getId()));
         }
         return $this->render('produitbou/new.html.twig', array(
             'produitbou' => $produit,
@@ -211,6 +185,8 @@ class ProduitbouController extends Controller
 
         return $this->redirectToRoute('produitbou_index');
     }
+
+
 
     /**
      * Creates a form to delete a produitbou entity.

@@ -1,41 +1,52 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Stores list</h1>
+<section class="default-page">
+    <div class="container">
+        <div class="tz-register">
+    <h1>Liste de votre store</h1>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nom</th>
-                <th>Description</th>
-                <th>Actions</th>
-            </tr>
+
+    <table class="table table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Nom Store</th>
+            <th scope="col">Description</th>
+            <th scope="col">Propriétaire</th>
+            <th scope="col">Action</th>
+
+        </tr>
         </thead>
         <tbody>
         {% for store in stores %}
+
             <tr>
-                <td><a href="{{ path('store_show', { 'id': store.id }) }}">{{ store.id }}</a></td>
+
                 <td>{{ store.nom }}</td>
                 <td>{{ store.description }}</td>
+                <td>{{ store.owner }}</td>
+
+
                 <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('store_show', { 'id': store.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('store_edit', { 'id': store.id }) }}">edit</a>
-                        </li>
-                    </ul>
+                    <a  class="btn btn-outline-dark" href="{{ path('store_edit', { 'id': store.id }) }}">Edit</a><br>
+                    <a class="btn btn-outline-danger"  href="{{ path('store_delete', { 'id': store.id }) }}"> Delete </a>
                 </td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
+    <div style="display: flex;justify-content: space-around;">
 
-    <ul>
-        <li>
-            <a href="{{ path('store_new') }}">Create a new store</a>
-        </li>
-    </ul>
+        <a href="{{ path('store_new') }}" style=" width: 50%">
+            <button type="button" class="btn btn-success " style=" width:100%;margin: 10px 0;" > Ajouter Nouveau Store</button>
+        </a>
+    </div>
+    {# display navigation #}
+    <div class="navigation">
+        {{ knp_pagination_render(stores) }}
+    </div>
+        </div>
+    </div>
+</section>
+
 {% endblock %}

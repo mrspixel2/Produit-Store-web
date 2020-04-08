@@ -41,6 +41,20 @@ class ProduitbouRepository extends \Doctrine\ORM\EntityRepository
             ->getResult();
     }
 
+    public function findBikeByOwnerStore($idOwner)
+    {
+        return $this->getEntityManager()
+            ->createQuery(
+                'SELECT p
+                      FROM GeneralBundle:Produitbou p
+                      WHERE p.idStore LIKE SELECT owner
+                                            FROM GeneralBundle:Store s
+                                            WHERE s.owner LIKE :idOwner'
+            )
+            ->setParameter('idOwner','%'.$idOwner.'%')
+            ->getResult();
+    }
+
 
 
 

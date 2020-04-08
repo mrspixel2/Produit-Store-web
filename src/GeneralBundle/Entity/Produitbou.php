@@ -3,6 +3,8 @@
 namespace GeneralBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Mgilet\NotificationBundle\Annotation\Notifiable;
+use Mgilet\NotificationBundle\NotifiableInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
@@ -10,8 +12,9 @@ use Symfony\Component\Validator\Constraints as Assert;
  *
  * @ORM\Table(name="produitbou")
  * @ORM\Entity
+ * @Notifiable(name="produit")
  */
-class Produitbou
+class Produitbou implements NotifiableInterface
 {
     /**
      * @var integer
