@@ -87,7 +87,7 @@ class ProduitbouController extends Controller
     {
         $produit=new Produitbou();
         $user = $this->getUser();
-        $form=$this->createForm(ProduitbouType::class,$produit,array('user' => $this->getUser(),));
+        $form=$this->createForm(ProduitbouType::class,$produit,array('user' => $this->getUser()));
         $form->handleRequest($request);
         if($form->isSubmitted())
         {

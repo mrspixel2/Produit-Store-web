@@ -15,10 +15,12 @@
     <link href="{{ asset('css/owl.theme.css') }}" rel='stylesheet' type='text/css'>
     <link href="{{ asset('rs-plugin/css/settings.css') }}" rel="stylesheet" type='text/css'>
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet" type='text/css'>
+    <link href="{{ asset('css/notification.css') }}" rel="stylesheet" type='text/css'>
 
     <!--[if lt IE 9]>
     <script src="js/html5shiv.min.js"></script>
     <script src="js/respond.min.js"></script>
+    <script src="{{ asset('js/notification.js') }}"></script>
     <![endif]-->
 </head>
 <body>
@@ -59,7 +61,30 @@
                         <a href="#">Call us:   (012) 3456 7890</a>
                     </li>
                 </ul>
+
                 <ul class="pull-right">
+
+                    <li class="tz-header-login">
+                        <a href="#">Notification</a>
+                        <div class="tz-login-form">
+                            <div class="notification notification-info">
+                                <strong>Info:</strong> Lorem ipsum dolor sit amet.
+                            </div>
+                            <div class="notification notification-success">
+                                <strong>Success:</strong> Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit.
+                            </div>
+
+                            <div class="notification notification-warning">
+                                <strong>Warning:</strong> Lorem ipsum dolor sit amet, consectetur
+                                adipisicing.
+                            </div>
+
+                            <div class="notification notification-danger">
+                                <strong>Danger:</strong> Lorem ipsum dolor sit amet consectetur.
+                            </div>
+                        </div>
+                    </li>
                     <li>
                         <a href="{{ path('fos_user_profile_edit') }}">My Account   </a>
                     </li>

@@ -85,6 +85,13 @@ class Produitbou implements NotifiableInterface
     private $idStore;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="Categorie", type="string", length=255, nullable=true)
+     */
+    private $categorie;
+
+    /**
      * Constructor
      */
     public function __construct()
@@ -237,6 +244,23 @@ class Produitbou implements NotifiableInterface
     {
         $this->idStore = $idStore;
     }
+
+    /**
+     * @return string
+     */
+    public function getCategorie()
+    {
+        return $this->categorie;
+    }
+
+    /**
+     * @param string $categorie
+     */
+    public function setCategorie($categorie)
+    {
+        $this->categorie = $categorie;
+    }
+
 
 }
 

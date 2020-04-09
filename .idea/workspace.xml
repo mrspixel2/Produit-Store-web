@@ -2,38 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9890f85-de66-4cfb-ba3e-28a50e2c7b7e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/util.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/27c56e708bc41bad33486c434293b297.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/42f858ed2f6401ef16ae69668a6ce162.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/4d76923ec4449be205e1d3d2b004f035.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/5606d4aac0ab579e241ac97fd538fa59.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/78ba7342608d8da7de7bd58519fe7d50.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/abcad2b22619cc73a4389d974d6f1cda.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/PIDEV.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PIDEV.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/notification.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/176bf131d20115531c1f53e6ab3c1d84.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/17836cd85627e3173adc795e05e2ea36.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/4153afa9e1a17d2164a8c7bbfefe1679.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/78cd0c626c4f2d84026cdd1b8cd4e8c2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/822470a1413e1113246237834000531d.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/85578d1a710f7edf99339f3b46993736.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/a099c421667a5ef7b8780d726cc32f6e.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/acd56821d2badd67c247f134ae12435c.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/b53c1fc8ecd1f7561be201e3f34b248e.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/notification.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppKernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/produitbou/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/produitbou/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/produitbou/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/produitbou/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/store/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/store/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/store/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/store/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routing.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GeneralBundle/Controller/ProduitbouController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneralBundle/Controller/ProduitbouController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GeneralBundle/Controller/StoreController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneralBundle/Controller/StoreController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GeneralBundle/Entity/Produitbou.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneralBundle/Entity/Produitbou.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GeneralBundle/Entity/Store.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneralBundle/Entity/Store.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GeneralBundle/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneralBundle/Entity/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GeneralBundle/Form/ProduitbouType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneralBundle/Form/ProduitbouType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GeneralBundle/Form/StoreType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneralBundle/Form/StoreType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GeneralBundle/Repository/ProduitbouRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneralBundle/Repository/ProduitbouRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GeneralBundle/Resources/config/routing/produit.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneralBundle/Resources/config/routing/produit.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +32,14 @@
     <execution>
       <phar pharPath="$PROJECT_DIR$/composer.phar" interpreterId="ac6ddcc1-b5ab-40b3-a96a-48497a5d2efb" />
     </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -94,6 +89,9 @@
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
       <path value="$PROJECT_DIR$/vendor/mgilet/notification-bundle" />
+      <path value="$PROJECT_DIR$/vendor/mrad/notifications-bundle" />
+      <path value="$PROJECT_DIR$/vendor/pusher/pusher-php-server" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/sodium_compat" />
     </include_path>
   </component>
   <component name="ProjectId" id="1ZcarDvNiMQkNWJZNoKImGQkitK" />
@@ -111,6 +109,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/GeneralBundle/Resources/views/shop" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -183,6 +182,8 @@
       <workItem from="1586217394267" duration="12579000" />
       <workItem from="1586250002773" duration="1226000" />
       <workItem from="1586307385065" duration="9319000" />
+      <workItem from="1586400156147" duration="4966000" />
+      <workItem from="1586413396455" duration="2019000" />
     </task>
     <servers />
   </component>
@@ -193,10 +194,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="485" y="98" key="#com.intellij.ide.util.MemberChooser" timestamp="1586308662760">
+    <state x="485" y="98" key="#com.intellij.ide.util.MemberChooser" timestamp="1586401126490">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="485" y="98" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1586308662760" />
+    <state x="485" y="98" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1586401126490" />
     <state x="485" y="103" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1585409890216" />
     <state x="413" y="120" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1586308153702">
       <screen x="0" y="0" width="1366" height="728" />
@@ -216,25 +217,25 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="-7" y="0" key="FileDocumentManager.FileCacheConflict/0.0.1366.728@0.0.1366.728" timestamp="1585778354654" />
-    <state width="1323" height="92" key="GridCell.Tab.0.bottom" timestamp="1586318820438">
+    <state width="1323" height="92" key="GridCell.Tab.0.bottom" timestamp="1586405132563">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="92" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586318820438" />
+    <state width="1323" height="92" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586405132563" />
     <state width="1323" height="192" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1585409796669" />
-    <state width="1323" height="92" key="GridCell.Tab.0.center" timestamp="1586318820438">
+    <state width="1323" height="92" key="GridCell.Tab.0.center" timestamp="1586405132563">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="92" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586318820438" />
+    <state width="1323" height="92" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586405132563" />
     <state width="1323" height="192" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1585409796668" />
-    <state width="1323" height="92" key="GridCell.Tab.0.left" timestamp="1586318820438">
+    <state width="1323" height="92" key="GridCell.Tab.0.left" timestamp="1586405132563">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="92" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586318820438" />
+    <state width="1323" height="92" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586405132563" />
     <state width="1323" height="192" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1585409796668" />
-    <state width="1323" height="92" key="GridCell.Tab.0.right" timestamp="1586318820438">
+    <state width="1323" height="92" key="GridCell.Tab.0.right" timestamp="1586405132563">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="92" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586318820438" />
+    <state width="1323" height="92" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586405132563" />
     <state width="1323" height="192" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1585409796669" />
     <state x="263" y="100" key="IDE.errors.dialog" timestamp="1586220062740">
       <screen x="0" y="0" width="1366" height="728" />
@@ -250,15 +251,15 @@
     </state>
     <state x="454" y="282" width="461" height="193" key="SymfonyPathDialog/0.0.1366.728@0.0.1366.728" timestamp="1585425726246" />
     <state x="454" y="298" key="SymfonyPathDialog/0.0.1366.768@0.0.1366.768" timestamp="1585141324849" />
-    <state x="391" y="200" key="com.intellij.ide.util.TipDialog" timestamp="1586307385273">
+    <state x="391" y="200" key="com.intellij.ide.util.TipDialog" timestamp="1586413401906">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="391" y="200" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586307385273" />
+    <state x="391" y="200" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586413401906" />
     <state x="391" y="211" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1585401539701" />
-    <state x="463" y="37" width="672" height="642" key="run.anything.popup" timestamp="1586307679941">
+    <state x="463" y="37" width="672" height="642" key="run.anything.popup" timestamp="1586413429599">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="37" width="672" height="642" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1586307679941" />
+    <state x="463" y="37" width="672" height="642" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1586413429599" />
     <state x="339" y="172" width="672" height="677" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1585409796687" />
     <state x="346" y="84" width="672" height="643" key="search.everywhere.popup" timestamp="1585778421476">
       <screen x="0" y="0" width="1366" height="728" />
@@ -273,6 +274,11 @@
           <url>file://$PROJECT_DIR$/app/Resources/views/produitbou/index.html.twig</url>
           <line>144</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Resources/views/base.html.twig</url>
+          <line>66</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
