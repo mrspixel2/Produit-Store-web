@@ -1,5 +1,6 @@
 <?php
 
+use SBC\NotificationsBundle\NotificationsBundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
@@ -22,6 +23,7 @@ class AppKernel extends Kernel
             new EspaceClientBundle\EspaceClientBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
             new Mgilet\NotificationBundle\MgiletNotificationBundle(),
+            new NotificationsBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

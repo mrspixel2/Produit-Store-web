@@ -95,3 +95,14 @@ knp_paginator:
         pagination: '@KnpPaginator/Pagination/sliding.html.twig'     # sliding pagination controls template
         sortable: '@KnpPaginator/Pagination/sortable_link.html.twig' # sort link template
         filtration: '@KnpPaginator/Pagination/filtration.html.twig'  # filters template
+
+# NotificationsBundle configuration
+notifications:
+    app_id:     979076
+    app_key:    36183c69e33362653425
+    app_secret: d591fba579c54fbcada8
+    cluster:    eu
+    # Optional
+    # Default false: work without ssl encryption
+    # Set it to true to work with ssl encryption
+    encrypted:  false

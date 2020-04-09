@@ -2,6 +2,7 @@
 
 namespace GeneralBundle\Controller;
 
+use GeneralBundle\Entity\Notification;
 use GeneralBundle\Entity\Produitbou;
 use GeneralBundle\Form\ProduitbouType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -101,6 +102,7 @@ class ProduitbouController extends Controller
             $em=$this->getDoctrine()->getManager();
             $em->persist($produit);
             $em->flush();
+
             return $this->redirectToRoute('produitbou_afficher',  array('id' => $produit->getId()));
         }
         return $this->render('produitbou/new.html.twig', array(

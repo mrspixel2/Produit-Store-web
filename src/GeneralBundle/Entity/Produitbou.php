@@ -3,16 +3,15 @@
 namespace GeneralBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Mgilet\NotificationBundle\Annotation\Notifiable;
-use Mgilet\NotificationBundle\NotifiableInterface;
+use SBC\NotificationsBundle\Builder\NotificationBuilder;
 use Symfony\Component\Validator\Constraints as Assert;
+use SBC\NotificationsBundle\Model\NotifiableInterface;
 
 /**
  * Produitbou
  *
  * @ORM\Table(name="produitbou")
  * @ORM\Entity
- * @Notifiable(name="produit")
  */
 class Produitbou implements NotifiableInterface
 {
@@ -259,6 +258,39 @@ class Produitbou implements NotifiableInterface
     public function setCategorie($categorie)
     {
         $this->categorie = $categorie;
+    }
+
+    public function notificationsOnCreate(NotificationBuilder $builder)
+    {
+        $notification = new Notification();
+        $notification
+            ->setTitle("New Product")
+            ->setDescription($this->getNom())
+            ->setRoute("produitbou_afficher")
+            ->setParameters(array('id' => $this->getId()))
+        ;
+
+        $builder->addNotification($notification);
+        return $builder;
+    }
+
+    public function notificationsOnUpdate(NotificationBuilder $builder)
+    {
+        $notification = new Notification();
+        $notification
+            ->setTitle("Update Product")
+            ->setDescription($this->getNom())
+            ->setRoute("produitbou_afficher")
+            ->setParameters(array('id' => $this->getId()))
+        ;
+
+        $builder->addNotification($notification);
+        return $builder;
+    }
+
+    public function notificationsOnDelete(NotificationBuilder $builder)
+    {
+        return $builder;
     }
 
 
