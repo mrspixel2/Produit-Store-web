@@ -2,41 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9890f85-de66-4cfb-ba3e-28a50e2c7b7e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/produitbou/bikes.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/produitbou/gears.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/produitbou/mesProduits.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Resources/views/produitbou/searchP.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/03fa43b82fe9af210e8c860507bb27f8.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/1734cf11fe8980aa75a35c2cad0ae7c2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/175eb3c29fa182e0fec0b9d21a6c5736.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/1bcfc4d284b76e442d4ca62492517c18.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/413536daaee5a599bc66089b1a31f2a6.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/5a4eec6cbbef949694b3cfb17b9a12b1.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/5d844b899ed88af9f386e4f9e86609c6.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/608816b4a4de7f23ca8f51e6e1c5e833.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/722ca2313cb7c1384fe7b3fc33287b5c.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/748c509303018e549e944af8b54a2e33.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/780d4fa59dead9492b8a2a7a923cfc69.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/8e7c0541c47ffad79536dc01f1b0ae44.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/910ba30fbb42655f5d407c390decd67d.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/a072ac09fda48b2f8874336cbae1495e.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/b8c13514bb28c638046553239ff7a65e.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/c9588562c213611af1a576ad99c0fad1.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/PIDEV.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PIDEV.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/6c1d3d693da140f3589b1292e3e68d28.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/95fb96600c3c0082af721d44a4ef724d.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/e1d09d98b842edd5b014d291eb0ffff5.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppKernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/produitbou/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/produitbou/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routing.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GeneralBundle/Controller/ProduitbouController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneralBundle/Controller/ProduitbouController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GeneralBundle/Entity/Produitbou.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneralBundle/Entity/Produitbou.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GeneralBundle/Entity/Store.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneralBundle/Entity/Store.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GeneralBundle/Form/ProduitbouType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneralBundle/Form/ProduitbouType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GeneralBundle/Repository/ProduitbouRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneralBundle/Repository/ProduitbouRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GeneralBundle/Resources/config/routing/produit.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneralBundle/Resources/config/routing/produit.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +172,7 @@
       <workItem from="1586307385065" duration="9319000" />
       <workItem from="1586400156147" duration="4966000" />
       <workItem from="1586413396455" duration="20609000" />
-      <workItem from="1586478949488" duration="14486000" />
+      <workItem from="1586478949488" duration="20466000" />
     </task>
     <servers />
   </component>
@@ -234,34 +206,38 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="-7" y="0" key="FileDocumentManager.FileCacheConflict/0.0.1366.728@0.0.1366.728" timestamp="1585778354654" />
-    <state width="1323" height="92" key="GridCell.Tab.0.bottom" timestamp="1586490798300">
+    <state x="465" y="261" key="FrameworkEditDialogDimensionKey" timestamp="1586509774502">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="92" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586490798300" />
+    <state x="465" y="261" key="FrameworkEditDialogDimensionKey/0.0.1366.728@0.0.1366.728" timestamp="1586509774502" />
+    <state width="1323" height="92" key="GridCell.Tab.0.bottom" timestamp="1586510718567">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="92" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586510718567" />
     <state width="1323" height="192" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1585409796669" />
-    <state width="1323" height="92" key="GridCell.Tab.0.center" timestamp="1586490798300">
+    <state width="1323" height="92" key="GridCell.Tab.0.center" timestamp="1586510718567">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="92" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586490798300" />
+    <state width="1323" height="92" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586510718567" />
     <state width="1323" height="192" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1585409796668" />
-    <state width="1323" height="92" key="GridCell.Tab.0.left" timestamp="1586490798300">
+    <state width="1323" height="92" key="GridCell.Tab.0.left" timestamp="1586510718567">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="92" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586490798300" />
+    <state width="1323" height="92" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586510718567" />
     <state width="1323" height="192" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1585409796668" />
-    <state width="1323" height="92" key="GridCell.Tab.0.right" timestamp="1586490798300">
+    <state width="1323" height="92" key="GridCell.Tab.0.right" timestamp="1586510718567">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="92" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586490798300" />
+    <state width="1323" height="92" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586510718567" />
     <state width="1323" height="192" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1585409796669" />
     <state x="263" y="100" key="IDE.errors.dialog" timestamp="1586220062740">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="263" y="100" key="IDE.errors.dialog/0.0.1366.728@0.0.1366.728" timestamp="1586220062740" />
-    <state x="186" y="15" key="SettingsEditor" timestamp="1585425735966">
+    <state x="112" y="15" key="SettingsEditor" timestamp="1586509815834">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="186" y="15" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1585425735966" />
+    <state x="112" y="15" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586509815834" />
     <state x="186" y="29" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1585141330252" />
     <state x="454" y="282" width="461" height="193" key="SymfonyPathDialog" timestamp="1585425726246">
       <screen x="0" y="0" width="1366" height="728" />
@@ -273,10 +249,10 @@
     </state>
     <state x="391" y="200" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586479042534" />
     <state x="391" y="211" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1585401539701" />
-    <state x="621" y="31" width="672" height="642" key="run.anything.popup" timestamp="1586490798316">
+    <state x="621" y="31" width="672" height="642" key="run.anything.popup" timestamp="1586510616642">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="621" y="31" width="672" height="642" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1586490798316" />
+    <state x="621" y="31" width="672" height="642" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1586510616642" />
     <state x="339" y="172" width="672" height="677" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1585409796687" />
     <state x="346" y="84" width="672" height="643" key="search.everywhere.popup" timestamp="1585778421476">
       <screen x="0" y="0" width="1366" height="728" />

@@ -98,7 +98,6 @@ class Produitbou implements NotifiableInterface
     {
         $this->commande = new \Doctrine\Common\Collections\ArrayCollection();
         $this->panier = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->idStore = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**

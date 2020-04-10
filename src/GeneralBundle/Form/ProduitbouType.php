@@ -44,7 +44,7 @@ class ProduitbouType extends AbstractType
                 'choice_label'=>'nom',
                 'expanded' => false,
                 'attr'=>array('class'=>'form-control form-control-lg','style' => 'margin-bottom:15px'),
-                'multiple'=>true))
+                'multiple'=>false))
             ->add("Ajouter",SubmitType::class,array('attr'=>array('class'=>'btn btn-primary','style'=>'width:100%;margin-bottom:15px')));
     }/**
      * {@inheritdoc}
