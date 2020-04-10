@@ -10,16 +10,20 @@ namespace GeneralBundle\Repository;
  */
 class ProduitbouRepository extends \Doctrine\ORM\EntityRepository
 {
-    public function findBikeByName($nameBike){
-        return $this->getEntityManager()
-            ->createQuery(
-                'SELECT p
-                FROM GeneralBundle:Produitbou p
-                WHERE p.Nom LIKE :nameBike'
-            )
-            ->setParameter('nameBike', '%'.$nameBike.'%')
+    /**
+     * @param $nom
+     * @return mixed
+     */
+    public function findByNom($nom){
+        return $this->createQueryBuilder('p')
+            ->andWhere('p.nom like :val')
+            ->setParameter('val','%'.$nom.'%')
+            ->orderBy('p.id' , 'ASC')
+            ->getQuery()
             ->getResult();
+
     }
+
 
 
 
@@ -30,30 +34,24 @@ class ProduitbouRepository extends \Doctrine\ORM\EntityRepository
                                   WHERE p.QteTotal = 0')->getResult();
     }
 
-    public function findBikeByStore($idStore){
-        return $this->getEntityManager()
-            ->createQuery(
-                'SELECT p
-                FROM GeneralBundle:Produitbou p
-                WHERE p.store_id LIKE :idStore'
-            )
-            ->setParameter('idStore', '%'.$idStore.'%')
-            ->getResult();
-    }
-
-    public function findBikeByOwnerStore($idOwner)
+    /**
+     * @param $idOwner
+     * @return mixed
+     */
+    public function findMyBikes($idOwner)
     {
         return $this->getEntityManager()
             ->createQuery(
                 'SELECT p
                       FROM GeneralBundle:Produitbou p
-                      WHERE p.idStore LIKE SELECT owner
-                                            FROM GeneralBundle:Store s
-                                            WHERE s.owner LIKE :idOwner'
+                      WHERE  p.idStore IN ( SELECT s.id FROM GeneralBundle:Store s
+                                            WHERE  s.owner = :idOwner)'
             )
             ->setParameter('idOwner','%'.$idOwner.'%')
             ->getResult();
     }
+
+
 
 
 

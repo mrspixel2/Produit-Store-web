@@ -129,9 +129,9 @@
                 <div class="tz-search pull-right">
 
                     <!--Start form search-->
-                    <form>
+                    <form method="GET" action="{{ path('produitbou_search') }}">
                         <label class="select-arrow">
-                            <select name="category">
+                            <select>
                                 <option value="">All Category</option>
                                 <option value="#">Baby Seats</option>
                                 <option value="#">Halfwheelers</option>
@@ -140,7 +140,7 @@
                                 <option value="#">Rim Tape</option>
                             </select>
                         </label>
-                        <input type="text" class="tz-query" id="tz-query" value="" placeholder="Search for product">
+                        <input name="search" type="text" class="tz-query" id="tz-query" value="" placeholder="Search for product">
                         <button type="submit"></button>
                     </form>
                     <!--End Form search-->
@@ -224,10 +224,10 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/general/produitbou">Bikes</a>
+                        <a href="{{ path('produitbou_bikes') }}">Bikes</a>
                     </li>
                     <li>
-                        <a href="/general/produitbou">Gear</a>
+                        <a href="{{ path('produitbou_gears') }}">Gear</a>
                     </li>
                     <li>
                         <a href="/general/produitbou">Shop</a>

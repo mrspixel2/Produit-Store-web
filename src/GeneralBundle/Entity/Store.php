@@ -48,6 +48,7 @@ class Store
     private $description;
 
 
+
     /**
      * Get id
      *
@@ -134,6 +135,24 @@ class Store
     {
         return "";
     }
+
+    /**
+     * @return mixed
+     */
+    public function getProduits()
+    {
+        return $this->produits;
+    }
+
+    /**
+     * @param mixed $produits
+     */
+    public function setProduits($produits)
+    {
+        $this->produits = $produits;
+    }
+
+
 
 
 }

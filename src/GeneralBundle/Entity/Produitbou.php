@@ -7,11 +7,12 @@ use SBC\NotificationsBundle\Builder\NotificationBuilder;
 use Symfony\Component\Validator\Constraints as Assert;
 use SBC\NotificationsBundle\Model\NotifiableInterface;
 
+
 /**
  * Produitbou
  *
  * @ORM\Table(name="produitbou")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="GeneralBundle\Repository\ProduitbouRepository")
  */
 class Produitbou implements NotifiableInterface
 {
@@ -74,7 +75,7 @@ class Produitbou implements NotifiableInterface
     private $panier;
 
     /**
-     * @var \Store
+     * @var Store
      *
      * @ORM\ManyToOne(targetEntity="Store")
      * @ORM\JoinColumns({
@@ -229,7 +230,7 @@ class Produitbou implements NotifiableInterface
     }
 
     /**
-     * @return \Store
+     * @return Store
      */
     public function getIdStore()
     {
@@ -237,7 +238,7 @@ class Produitbou implements NotifiableInterface
     }
 
     /**
-     * @param \Store $idStore
+     * @param Store $idStore
      */
     public function setIdStore($idStore)
     {

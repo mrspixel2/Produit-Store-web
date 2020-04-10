@@ -2,12 +2,13 @@
 
 namespace GeneralBundle\Controller;
 
-use GeneralBundle\Entity\Notification;
 use GeneralBundle\Entity\Produitbou;
 use GeneralBundle\Form\ProduitbouType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Produitbou controller.
@@ -42,18 +43,24 @@ class ProduitbouController extends Controller
         ));
     }
 
-    public function ProductsByStoreAction(Request $request)
+    /**
+     * Lists produitbou entities.
+     *
+     * @Route("/search", name="produitbou_search")
+     * @Method("GET")
+     */
+    public function RecherchePAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
+        $produitbous = $em->getRepository('GeneralBundle:Produitbou')->findAll();
 
-        if($request->isMethod("post"))
+        if($request->isMethod("GET"))
         {
-            $storeid = $em->getRepository('GeneralBundle:Store')->findStoreByName($request->get("search"));
-            $produitbous = $em->getRepository('GeneralBundle:Produitbou')->findBikeByStore($storeid);
+            $key = $request->get('search');
+            if($key)
+            $produitbous = $em->getRepository('GeneralBundle:Produitbou')->findBy(array('nom' => $key));
 
         }
-
-
         $paginator= $this->get('knp_paginator');
         $result=$paginator->paginate(
             $produitbous,
@@ -61,10 +68,79 @@ class ProduitbouController extends Controller
             $request->query->getInt('limit',5) /*limit per page*/
         );
 
-        return $this->render('produitbou/index.html.twig', array(
+        return $this->render('produitbou/searchP.html.twig', array(
             'produitbous' => $result,
         ));
     }
+
+    /**
+     * Lists all produitbou entities.
+     *
+     * @Route("/bikes", name="produitbou_bikes")
+     * @Method("GET")
+     */
+    public function BikesAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $produitbous = $em->getRepository('GeneralBundle:Produitbou')->findBy(array('categorie' => 'bike'));
+        $paginator= $this->get('knp_paginator');
+        $result=$paginator->paginate(
+            $produitbous,
+            $request->query->getInt('page', 1), /*page number*/
+            $request->query->getInt('limit',5) /*limit per page*/
+        );
+
+        return $this->render('produitbou/bikes.html.twig', array(
+            'produitbous' => $result,
+        ));
+    }
+
+    /**
+     * Lists all gears.
+     *
+     * @Route("/gears", name="produitbou_gears")
+     * @Method("GET")
+     */
+    public function GearsAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $produitbous = $em->getRepository('GeneralBundle:Produitbou')->findBy(array('categorie' => 'accessories'));
+        $paginator= $this->get('knp_paginator');
+        $result=$paginator->paginate(
+            $produitbous,
+            $request->query->getInt('page', 1), /*page number*/
+            $request->query->getInt('limit',5) /*limit per page*/
+        );
+
+        return $this->render('produitbou/gears.html.twig', array(
+            'produitbous' => $result,
+        ));
+    }
+
+    /**
+     * Lists produitbou entities.
+     *
+     * @Route("/myproducts", name="produitbou_myproducts")
+     * @Method("GET")
+     */
+    public function mesProduitsAction(Request $request)
+    {
+        $user = $this->container->get('security.token_storage')->getToken()->getUser();
+        $em = $this->getDoctrine()->getManager();
+        $stores = $em->getRepository('GeneralBundle:Store')->findBy(array('owner' => $user ));
+        $produits = $em->getRepository('GeneralBundle:Produitbou')->findBy(array('idStore' => $stores ));
+        $paginator= $this->get('knp_paginator');
+        $result=$paginator->paginate(
+            $produits,
+            $request->query->getInt('page', 1), /*page number*/
+            $request->query->getInt('limit',5) /*limit per page*/
+        );
+        return $this->render('produitbou/mesProduits.html.twig', array(
+            'produits' => $result,
+        ));
+    }
+
+
 
     public function produitsEnReptureDeStockAction(Request $request){
         $em=$this->getDoctrine()->getManager();
@@ -87,7 +163,6 @@ class ProduitbouController extends Controller
     public function ajouterProduitAction(Request $request)
     {
         $produit=new Produitbou();
-        $user = $this->getUser();
         $form=$this->createForm(ProduitbouType::class,$produit,array('user' => $this->getUser()));
         $form->handleRequest($request);
         if($form->isSubmitted())
@@ -152,10 +227,17 @@ class ProduitbouController extends Controller
     public function editAction(Request $request, Produitbou $produitbou)
     {
         $deleteForm = $this->createDeleteForm($produitbou);
-        $editForm = $this->createForm('GeneralBundle\Form\ProduitbouType', $produitbou);
+        $editForm = $this->createForm('GeneralBundle\Form\ProduitbouType', $produitbou, array('user' => $this->getUser()));
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
+            /** @var UploadedFile $file */
+            $file = $produitbou->getImage();
+            $filename = md5(uniqid()).'.'.$file->guessExtension();
+            $file->move(
+                $this->getParameter('image_directory'),$filename
+            );
+            $produitbou->setImage($filename);
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('produitbou_edit', array('id' => $produitbou->getId()));

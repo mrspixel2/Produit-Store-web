@@ -39,4 +39,25 @@ produit_enrepture:
   defaults: { _controller: "GeneralBundle:Produitbou:produitsEnReptureDeStock"}
   methods: GET
 
+produit_mesProduits:
+  path: /myproducts
+  defaults: { _controller: "GeneralBundle:Produitbou:mesProduits"}
+  methods: [GET, POST]
+
+produit_searchP:
+  path: /search
+  defaults: { _controller: "GeneralBundle:Produitbou:RechercheP"}
+  methods: GET
+
+produit_bikes:
+  path: /bikes
+  defaults: { _controller: "GeneralBundle:Produitbou:Bikes"}
+  methods: [GET, POST]
+
+produit_gears:
+  path: /gears
+  defaults: { _controller: "GeneralBundle:Produitbou:Gears"}
+  methods: [GET, POST]
+
+
 

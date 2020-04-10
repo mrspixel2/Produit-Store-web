@@ -2,6 +2,7 @@
 
 namespace GeneralBundle\Form;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use GeneralBundle\Entity\User;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
@@ -37,10 +38,11 @@ class ProduitbouType extends AbstractType
                 'multiple'=>false
             ])
             ->add('idStore',EntityType::class,array(
-                'label' => 'Nom du store',
                 'class'=>'GeneralBundle:Store',
+                'label' => 'Nom du store',
                 'choices' => $user->getStores(),
                 'choice_label'=>'nom',
+                'expanded' => false,
                 'attr'=>array('class'=>'form-control form-control-lg','style' => 'margin-bottom:15px'),
                 'multiple'=>true))
             ->add("Ajouter",SubmitType::class,array('attr'=>array('class'=>'btn btn-primary','style'=>'width:100%;margin-bottom:15px')));

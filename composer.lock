@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a4eb1fdc00f9a0a9a8ea8ca9c110e611",
+    "content-hash": "380bfb50c604607e4eaa268f9fdb1e34",
     "packages": [
         {
             "name": "composer/ca-bundle",
-            "version": "1.2.6",
+            "version": "1.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/ca-bundle.git",
-                "reference": "47fe531de31fca4a1b997f87308e7d7804348f7e"
+                "reference": "95c63ab2117a72f48f5a55da9740a3273d45b7fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/47fe531de31fca4a1b997f87308e7d7804348f7e",
-                "reference": "47fe531de31fca4a1b997f87308e7d7804348f7e",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/95c63ab2117a72f48f5a55da9740a3273d45b7fd",
+                "reference": "95c63ab2117a72f48f5a55da9740a3273d45b7fd",
                 "shasum": ""
             },
             "require": {
@@ -60,7 +60,17 @@
                 "ssl",
                 "tls"
             ],
-            "time": "2020-01-13T10:02:55+00:00"
+            "funding": [
+                {
+                    "url": "https://packagist.com",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-04-08T08:27:21+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -1206,52 +1216,6 @@
                 "symfony"
             ],
             "time": "2019-02-28T13:51:20+00:00"
-        },
-        {
-            "name": "mgilet/notification-bundle",
-            "version": "3.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/maximilienGilet/notification-bundle.git",
-                "reference": "6b44f0f618a8f4ac0d37232ce38eb9bea62cfba0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/maximilienGilet/notification-bundle/zipball/6b44f0f618a8f4ac0d37232ce38eb9bea62cfba0",
-                "reference": "6b44f0f618a8f4ac0d37232ce38eb9bea62cfba0",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/doctrine-bundle": "*",
-                "symfony/framework-bundle": "^2.7 || ^3.0 || ^4.0",
-                "twig/twig": "*"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Mgilet\\NotificationBundle\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Maximilien Gilet",
-                    "email": "maximilien248@gmail.com"
-                }
-            ],
-            "description": "A simple Symfony 3 bundle for user notifications",
-            "keywords": [
-                "symfony notification bundle simple"
-            ],
-            "time": "2018-09-06T11:36:37+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -2998,7 +2962,8 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.5.9"
+        "php": ">=5.5.9",
+        "ext-json": "*"
     },
     "platform-dev": [],
     "platform-overrides": {
