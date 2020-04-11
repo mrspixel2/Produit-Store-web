@@ -54,8 +54,9 @@ class StoreController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($store);
             $em->flush();
+            $this->addFlash('success','Votre store a été bien enregistrer!');
 
-            return $this->redirectToRoute('store_show', array('id' => $store->getId()));
+            return $this->redirectToRoute('store_index', array('id' => $store->getId()));
         }
 
         return $this->render('store/new.html.twig', array(
@@ -94,8 +95,9 @@ class StoreController extends Controller
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
+            $this->addFlash('success','Votre store a été modifier!');
 
-            return $this->redirectToRoute('store_edit', array('id' => $store->getId()));
+            return $this->redirectToRoute('store_index', array('id' => $store->getId()));
         }
 
         return $this->render('store/edit.html.twig', array(
@@ -120,6 +122,7 @@ class StoreController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->remove($store);
             $em->flush();
+            $this->addFlash('success','Votre a été supprimer!');
         }
 
         return $this->redirectToRoute('store_index');

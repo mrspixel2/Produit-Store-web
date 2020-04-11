@@ -188,6 +188,7 @@ class ProduitbouController extends Controller
             $em=$this->getDoctrine()->getManager();
             $em->persist($produit);
             $em->flush();
+            $this->addFlash('success','Produit Ajouter');
 
             return $this->redirectToRoute('produitbou_afficher',  array('id' => $produit->getId()));
         }
@@ -250,6 +251,7 @@ class ProduitbouController extends Controller
             );
             $produitbou->setImage($filename);
             $this->getDoctrine()->getManager()->flush();
+            $this->addFlash('success','votre produit a éte édité avec success! ');
 
             return $this->redirectToRoute('produitbou_edit', array('id' => $produitbou->getId()));
         }
@@ -276,6 +278,7 @@ class ProduitbouController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->remove($produitbou);
             $em->flush();
+            $this->addFlash('success','Votre produit a été supprimer!');
         }
 
         return $this->redirectToRoute('produitbou_index');

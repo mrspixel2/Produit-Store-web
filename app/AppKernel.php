@@ -23,6 +23,7 @@ class AppKernel extends Kernel
             new EspaceClientBundle\EspaceClientBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
             new NotificationsBundle(),
+            new blackknight467\StarRatingBundle\StarRatingBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

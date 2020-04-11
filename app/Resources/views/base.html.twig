@@ -42,12 +42,15 @@
     <link href="{{ asset('rs-plugin/css/settings.css') }}" rel="stylesheet" type='text/css'>
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet" type='text/css'>
     <link href="{{ asset('css/notification.css') }}" rel="stylesheet" type='text/css'>
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/starrating/css/rating.css') }}" />
 
     <!--[if lt IE 9]>
     <script src="{{ asset('js/html5shiv.min.js') }}"></script>
     <script src="{{ asset('js/respond.min.js') }}"></script>
     <script src="{{ asset('js/jquery.min.js') }}>
     <script src="{{ asset('js/notification.js') }}"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="{{ asset('bundles/starrating/js/rating.js') }}"></script>
     <![endif]-->
 </head>
 <body>
@@ -217,7 +220,7 @@
         </div>
 
         <!--Start main menu -->
-        <nav class="tz-menu-primary">
+        <nav class="tz-menu-primary {{ app.session.flashBag.peek('success')|length > 0 ? '' : 'mb-5' }}">
             <div class="container">
 
                 <!--Main Menu-->
@@ -285,6 +288,11 @@
 
         <!--End Main menu-->
         <body>
+        {% for message in app.flashes('success') %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+        {% endfor %}
         {% block body %}{% endblock %}
 
         {# Call NotificationsBundles's assets #}
@@ -473,5 +481,6 @@
 <script type='text/javascript' src="{{ asset('rs-plugin/js/jquery.themepunch.tools.min.js')}}"></script>
 <script type='text/javascript' src="{{ asset('rs-plugin/js/jquery.themepunch.revolution.min.js')}}"></script>
 <script type='text/javascript' src="{{ asset('rs-plugin/js/custom-rs.js')}}"></script>
+<script src="{{ asset('bundles/starrating/js/rating.js') }}"></script>
 </body>
 </html>

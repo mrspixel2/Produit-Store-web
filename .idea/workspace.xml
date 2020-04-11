@@ -2,30 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9890f85-de66-4cfb-ba3e-28a50e2c7b7e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/GeneralBundle/Controller/NotificationsController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GeneralBundle/Resources/views/Notification/display.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GeneralBundle/Tests/Controller/NotificationControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GeneralBundle/Tests/Controller/NotificationsControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/flashy.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/096935e6f6a6bbecce90760f6c072dc0.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/1602261de59b3a239ba9b1302e28fd9c.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/215c3fdc5f2b8a47c1f8dfef173d526f.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/334da9e454385c5929ba8ead2c12f51f.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/5476d2517bacf99848445eee372cc68e.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/669f0ef18bf56a72ea4ccc26f7eafe1f.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/a32469b7e12b7909e6ad46b4cfda67ef.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/c24c796386e085b3a884a0f3b6d506a3.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/d84be3cbf1d0cd632f8280e0779f3e9b.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/flashy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/9eaa7f79ece131484de488a35c63cf01.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/d9df5cf00c208166fdabbad75c2638a1.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PIDEV.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PIDEV.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppKernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/produitbou/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/produitbou/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GeneralBundle/Controller/ProduitbouController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneralBundle/Controller/ProduitbouController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GeneralBundle/Resources/config/routing/produit.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneralBundle/Resources/config/routing/produit.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GeneralBundle/Resources/views/Default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneralBundle/Resources/views/Default/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GeneralBundle/Controller/StoreController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneralBundle/Controller/StoreController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +84,19 @@
       <path value="$PROJECT_DIR$/vendor/mrad/notifications-bundle" />
       <path value="$PROJECT_DIR$/vendor/pusher/pusher-php-server" />
       <path value="$PROJECT_DIR$/vendor/paragonie/sodium_compat" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/reflection" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/ocramius/package-versions" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/vendor/mercuryseries/flashy-bundle" />
+      <path value="$PROJECT_DIR$/vendor/blackknight467/star-rating-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1ZcarDvNiMQkNWJZNoKImGQkitK" />
@@ -194,7 +195,8 @@
       <workItem from="1586413396455" duration="20609000" />
       <workItem from="1586478949488" duration="20469000" />
       <workItem from="1586517139052" duration="4069000" />
-      <workItem from="1586567165837" duration="13259000" />
+      <workItem from="1586567165837" duration="13372000" />
+      <workItem from="1586586587952" duration="9100000" />
     </task>
     <servers />
   </component>
@@ -214,10 +216,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="112" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1586521816129" />
-    <state x="413" y="120" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1586308153702">
+    <state x="413" y="120" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1586596655313">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="120" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1586308153702" />
+    <state x="413" y="120" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1586596655313" />
     <state x="407" y="261" key="ComposerCompositePathDialog" timestamp="1585425694326">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -236,25 +238,25 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="465" y="261" key="FrameworkEditDialogDimensionKey/0.0.1366.728@0.0.1366.728" timestamp="1586509774502" />
-    <state width="1323" height="92" key="GridCell.Tab.0.bottom" timestamp="1586586254308">
+    <state width="1323" height="92" key="GridCell.Tab.0.bottom" timestamp="1586597920745">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="92" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586586254308" />
+    <state width="1323" height="92" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586597920745" />
     <state width="1323" height="192" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1585409796669" />
-    <state width="1323" height="92" key="GridCell.Tab.0.center" timestamp="1586586254308">
+    <state width="1323" height="92" key="GridCell.Tab.0.center" timestamp="1586597920745">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="92" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586586254308" />
+    <state width="1323" height="92" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586597920745" />
     <state width="1323" height="192" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1585409796668" />
-    <state width="1323" height="92" key="GridCell.Tab.0.left" timestamp="1586586254308">
+    <state width="1323" height="92" key="GridCell.Tab.0.left" timestamp="1586597920744">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="92" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586586254308" />
+    <state width="1323" height="92" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586597920744" />
     <state width="1323" height="192" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1585409796668" />
-    <state width="1323" height="92" key="GridCell.Tab.0.right" timestamp="1586586254308">
+    <state width="1323" height="92" key="GridCell.Tab.0.right" timestamp="1586597920745">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="92" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586586254308" />
+    <state width="1323" height="92" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586597920745" />
     <state width="1323" height="192" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1585409796669" />
     <state x="263" y="100" key="IDE.errors.dialog" timestamp="1586220062740">
       <screen x="0" y="0" width="1366" height="728" />
@@ -270,15 +272,15 @@
     </state>
     <state x="454" y="282" width="461" height="193" key="SymfonyPathDialog/0.0.1366.728@0.0.1366.728" timestamp="1585425726246" />
     <state x="454" y="298" key="SymfonyPathDialog/0.0.1366.768@0.0.1366.768" timestamp="1585141324849" />
-    <state x="391" y="200" key="com.intellij.ide.util.TipDialog" timestamp="1586567178436">
+    <state x="391" y="200" key="com.intellij.ide.util.TipDialog" timestamp="1586586598304">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="391" y="200" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586567178436" />
+    <state x="391" y="200" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586586598304" />
     <state x="391" y="211" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1585401539701" />
-    <state x="621" y="31" width="672" height="642" key="run.anything.popup" timestamp="1586567726483">
+    <state x="621" y="31" width="672" height="642" key="run.anything.popup" timestamp="1586590604059">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="621" y="31" width="672" height="642" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1586567726483" />
+    <state x="621" y="31" width="672" height="642" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1586590604059" />
     <state x="339" y="172" width="672" height="677" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1585409796687" />
     <state x="346" y="84" width="672" height="643" key="search.everywhere.popup" timestamp="1585778421476">
       <screen x="0" y="0" width="1366" height="728" />
@@ -296,7 +298,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Resources/views/base.html.twig</url>
-          <line>93</line>
+          <line>96</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
