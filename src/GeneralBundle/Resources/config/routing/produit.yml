@@ -2,6 +2,10 @@ Produit_index:
   path:     /
   defaults: { _controller: "GeneralBundle:Produitbou:index" }
   methods:  GET
+Produit:
+  path:     /a
+  defaults: { _controller: "GeneralBundle:Produitbou:a" }
+  methods:  GET
 
 Produit_show:
   path:     /{idvelo}/show
@@ -29,10 +33,7 @@ Produit_delete:
   defaults: { _controller: "GeneralBundle:Produitbou:delete" }
   methods:  DELETE
 
-Produit_bystore:
-  path: /searchbystore
-  defaults: { _controller: "GeneralBundle:Produitbou:ProductsByStore" }
-  methods: GET
+
 
 produit_enrepture:
   path: /repture
@@ -58,6 +59,8 @@ produit_gears:
   path: /gears
   defaults: { _controller: "GeneralBundle:Produitbou:Gears"}
   methods: [GET, POST]
+
+
 
 
 

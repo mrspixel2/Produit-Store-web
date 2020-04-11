@@ -4,6 +4,7 @@ namespace GeneralBundle\Controller;
 
 use GeneralBundle\Entity\Produitbou;
 use GeneralBundle\Form\ProduitbouType;
+use MercurySeries\FlashyBundle\FlashyNotifier;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -116,7 +117,17 @@ class ProduitbouController extends Controller
             'produitbous' => $result,
         ));
     }
+    /**
+     * Lists produitbou entities.
+     *
+     * @Route("/a", name="a")
+     * @Method("GET")
+     */
+    public function aAction(Request $request)
+    {
+        return $this->render('base.html.twig');
 
+    }
     /**
      * Lists produitbou entities.
      *

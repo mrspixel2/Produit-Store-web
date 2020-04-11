@@ -2,13 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9890f85-de66-4cfb-ba3e-28a50e2c7b7e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/images/6c1d3d693da140f3589b1292e3e68d28.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/95fb96600c3c0082af721d44a4ef724d.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/e1d09d98b842edd5b014d291eb0ffff5.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GeneralBundle/Controller/NotificationsController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GeneralBundle/Resources/views/Notification/display.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GeneralBundle/Tests/Controller/NotificationControllerTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GeneralBundle/Tests/Controller/NotificationsControllerTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/flashy.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/096935e6f6a6bbecce90760f6c072dc0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/1602261de59b3a239ba9b1302e28fd9c.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/215c3fdc5f2b8a47c1f8dfef173d526f.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/334da9e454385c5929ba8ead2c12f51f.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/5476d2517bacf99848445eee372cc68e.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/669f0ef18bf56a72ea4ccc26f7eafe1f.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/a32469b7e12b7909e6ad46b4cfda67ef.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/c24c796386e085b3a884a0f3b6d506a3.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/d84be3cbf1d0cd632f8280e0779f3e9b.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/flashy.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GeneralBundle/Entity/Produitbou.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneralBundle/Entity/Produitbou.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GeneralBundle/Form/ProduitbouType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneralBundle/Form/ProduitbouType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GeneralBundle/Controller/ProduitbouController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneralBundle/Controller/ProduitbouController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GeneralBundle/Resources/config/routing/produit.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneralBundle/Resources/config/routing/produit.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GeneralBundle/Resources/views/Default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneralBundle/Resources/views/Default/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +112,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/GeneralBundle/Resources/views/shop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/js" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -107,13 +124,15 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\PIDEV1\web\js" />
+      <recent name="C:\wamp64\www\PIDEV1\web\css" />
+      <recent name="C:\wamp64\www\PIDEV1\src\GeneralBundle\Resources\views\shop" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\PIDEV1\web\css" />
       <recent name="C:\wamp64\www\PIDEV\src\GeneralBundle\Entity" />
       <recent name="C:\wamp64\www\PIDEV\src\EspaceClientBundle\Entity" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\PIDEV1\src\GeneralBundle\Resources\views\shop" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -133,6 +152,7 @@
       <command value="s cache:clear" />
       <command value="s doctrine:database:create" />
       <command value="s doctrine:schema:update --force" />
+      <command value="s generate:controller" />
       <command value="s server:run" />
     </option>
   </component>
@@ -172,7 +192,9 @@
       <workItem from="1586307385065" duration="9319000" />
       <workItem from="1586400156147" duration="4966000" />
       <workItem from="1586413396455" duration="20609000" />
-      <workItem from="1586478949488" duration="20466000" />
+      <workItem from="1586478949488" duration="20469000" />
+      <workItem from="1586517139052" duration="4069000" />
+      <workItem from="1586567165837" duration="13259000" />
     </task>
     <servers />
   </component>
@@ -188,6 +210,10 @@
     </state>
     <state x="485" y="98" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1586433082493" />
     <state x="485" y="103" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1585409890216" />
+    <state x="413" y="112" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586521816129">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="112" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1586521816129" />
     <state x="413" y="120" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1586308153702">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -210,25 +236,25 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="465" y="261" key="FrameworkEditDialogDimensionKey/0.0.1366.728@0.0.1366.728" timestamp="1586509774502" />
-    <state width="1323" height="92" key="GridCell.Tab.0.bottom" timestamp="1586510718567">
+    <state width="1323" height="92" key="GridCell.Tab.0.bottom" timestamp="1586586254308">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="92" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586510718567" />
+    <state width="1323" height="92" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586586254308" />
     <state width="1323" height="192" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1585409796669" />
-    <state width="1323" height="92" key="GridCell.Tab.0.center" timestamp="1586510718567">
+    <state width="1323" height="92" key="GridCell.Tab.0.center" timestamp="1586586254308">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="92" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586510718567" />
+    <state width="1323" height="92" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586586254308" />
     <state width="1323" height="192" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1585409796668" />
-    <state width="1323" height="92" key="GridCell.Tab.0.left" timestamp="1586510718567">
+    <state width="1323" height="92" key="GridCell.Tab.0.left" timestamp="1586586254308">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="92" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586510718567" />
+    <state width="1323" height="92" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586586254308" />
     <state width="1323" height="192" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1585409796668" />
-    <state width="1323" height="92" key="GridCell.Tab.0.right" timestamp="1586510718567">
+    <state width="1323" height="92" key="GridCell.Tab.0.right" timestamp="1586586254308">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="92" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586510718567" />
+    <state width="1323" height="92" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586586254308" />
     <state width="1323" height="192" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1585409796669" />
     <state x="263" y="100" key="IDE.errors.dialog" timestamp="1586220062740">
       <screen x="0" y="0" width="1366" height="728" />
@@ -244,15 +270,15 @@
     </state>
     <state x="454" y="282" width="461" height="193" key="SymfonyPathDialog/0.0.1366.728@0.0.1366.728" timestamp="1585425726246" />
     <state x="454" y="298" key="SymfonyPathDialog/0.0.1366.768@0.0.1366.768" timestamp="1585141324849" />
-    <state x="391" y="200" key="com.intellij.ide.util.TipDialog" timestamp="1586479042534">
+    <state x="391" y="200" key="com.intellij.ide.util.TipDialog" timestamp="1586567178436">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="391" y="200" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586479042534" />
+    <state x="391" y="200" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586567178436" />
     <state x="391" y="211" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1585401539701" />
-    <state x="621" y="31" width="672" height="642" key="run.anything.popup" timestamp="1586510616642">
+    <state x="621" y="31" width="672" height="642" key="run.anything.popup" timestamp="1586567726483">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="621" y="31" width="672" height="642" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1586510616642" />
+    <state x="621" y="31" width="672" height="642" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1586567726483" />
     <state x="339" y="172" width="672" height="677" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1585409796687" />
     <state x="346" y="84" width="672" height="643" key="search.everywhere.popup" timestamp="1585778421476">
       <screen x="0" y="0" width="1366" height="728" />
@@ -270,7 +296,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Resources/views/base.html.twig</url>
-          <line>66</line>
+          <line>93</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">

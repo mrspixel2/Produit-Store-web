@@ -1,0 +1,12 @@
+
+{% for notification in notifications|reverse|slice(0, 5) %}
+
+
+
+        <div id="notifications" class="notification notification-info">
+            <strong>{{ notification.title }}:</strong>   {{ notification.description }} <br><a href="{{ path(notification.route, notification.parameters) }}">Consulter le !!</a>
+        </div>
+
+
+
+{% endfor %}

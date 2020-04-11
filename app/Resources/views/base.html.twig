@@ -6,6 +6,32 @@
 
     <title>RookyBike</title>
 
+    {% block javascripts %}
+        {{ notifications_assets() }}
+        <script
+                src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+                integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+                crossorigin="anonymous"></script>
+        <script>
+            function onNotificationsPushed(data)
+            {
+                console.log('data',data);
+                console.log("aa");
+                alert("aa");
+                data.forEach(function(item)
+                {
+                    let div = '<div class="notification notification-info">\n' +
+                        '        <strong>'+item.title+':</strong> '+item.description+' <br><a href="'+item.fullUrl+'">Consulter le !!</a>\n' +
+                        '    </div>';
+                    $('#notifications').append(div);
+                });
+            }
+
+
+        </script>
+    {% endblock %}
+    {# Call NotificationsBundles's assets #}
+
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" type='text/css'>
     <link href="{{ asset('fonts/font-awesome/css/font-awesome.min.css') }}" rel='stylesheet' type='text/css'>
     <link href="{{ asset('http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic') }}" rel='stylesheet' type='text/css'>
@@ -18,8 +44,9 @@
     <link href="{{ asset('css/notification.css') }}" rel="stylesheet" type='text/css'>
 
     <!--[if lt IE 9]>
-    <script src="js/html5shiv.min.js"></script>
-    <script src="js/respond.min.js"></script>
+    <script src="{{ asset('js/html5shiv.min.js') }}"></script>
+    <script src="{{ asset('js/respond.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.min.js') }}>
     <script src="{{ asset('js/notification.js') }}"></script>
     <![endif]-->
 </head>
@@ -67,23 +94,12 @@
                     <li class="tz-header-login">
                         <a href="#">Notification</a>
                         <div class="tz-login-form">
-                            <div class="notification notification-info">
-                                <strong>Info:</strong> Lorem ipsum dolor sit amet.
-                            </div>
-                            <div class="notification notification-success">
-                                <strong>Success:</strong> Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit.
-                            </div>
 
-                            <div class="notification notification-warning">
-                                <strong>Warning:</strong> Lorem ipsum dolor sit amet, consectetur
-                                adipisicing.
-                            </div>
+                            {{ render(controller('GeneralBundle:Notifications:display')) }}
 
-                            <div class="notification notification-danger">
-                                <strong>Danger:</strong> Lorem ipsum dolor sit amet consectetur.
-                            </div>
+
                         </div>
+
                     </li>
                     <li>
                         <a href="{{ path('fos_user_profile_edit') }}">My Account   </a>
@@ -252,7 +268,6 @@
                     <li>
                         <a href="blog.html">
                             Blog
-                            <span class="cyan-dark">Best off!</span>
                         </a>
                         <ul class="sub-menu">
                             <li>
@@ -271,26 +286,10 @@
         <!--End Main menu-->
         <body>
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+
         {# Call NotificationsBundles's assets #}
-        {{ notifications_assets() }}
-        <script>
-            /**
-             * After calling notifications_assets() "pusher" is now available
-             * and you can use it this way
-             */
 
-                // select the channel you want to listen to
-            var channel = pusher.subscribe("notifications");// notifications channel
-            channel.bind("my-event", function(data) {
-                console.log('from notifications channel', data);
-            });
-            var channel = pusher.subscribe("messages");// messages channel
-            channel.bind("my-event", function(data) {
-                console.log('from messages channel', data);
-            });
 
-        </script>
         </body>
         <!--Start Footer-->
         <footer class="tz-footer">
