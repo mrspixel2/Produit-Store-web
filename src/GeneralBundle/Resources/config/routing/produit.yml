@@ -69,6 +69,12 @@ ajax_search:
   defaults: { _controller: GeneralBundle:Produitbou:search}
   methods: [GET, POST]
 
+produit_searchPPS:
+  path: /searchPPA
+  defaults: { _controller: "GeneralBundle:Produitbou:RecherchePPA"}
+  methods: GET
+
+
 
 
 

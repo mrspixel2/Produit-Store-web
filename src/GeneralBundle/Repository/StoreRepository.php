@@ -11,10 +11,14 @@ namespace GeneralBundle\Repository;
 class StoreRepository extends \Doctrine\ORM\EntityRepository
 {
 
+    /**
+     * @param $nameStore
+     * @return mixed
+     */
     public function findStoreByName($nameStore){
         return $this->getEntityManager()
             ->createQuery(
-                'SELECT id
+                'SELECT s.id
                 FROM GeneralBundle:Store s
                 WHERE s.nom LIKE :nameStore'
             )

@@ -121,7 +121,7 @@
                                 <!--End button contro-->
 
                                 <!--Shop order-->
-                                <form class="shop-order" method="post">
+                                <form class="shop-order" action="{{ path('produit_searchPPS') }}" method="GET">
                                     <label class="form-arrow">
                                         <select class="number-item" name="number_item">
                                             <option value="12">12 items/page</option>
@@ -129,8 +129,10 @@
                                             <option value="3">3 items/page</option>
                                         </select>
                                     </label>
-                                    <th> {{ knp_pagination_sortable(produitbous,'Trier par Nom','pb.Nom')}}</th>
-                                    <th> {{ knp_pagination_sortable(produitbous,'Trier par Prix','pb.prix')}}</th>
+                                    <!-- Search form -->
+                                    <div class="md-form mt-0">
+                                        <input  class="form-control" type="text" placeholder="Nom du store" name="search2" aria-label="Search">
+                                    </div>
                                 </form>
                                 <!--End shop order-->
 

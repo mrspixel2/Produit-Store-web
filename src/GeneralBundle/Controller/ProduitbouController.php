@@ -2,6 +2,7 @@
 
 namespace GeneralBundle\Controller;
 
+use Doctrine\ORM\Mapping\OrderBy;
 use GeneralBundle\Entity\Produitbou;
 use GeneralBundle\Form\ProduitbouType;
 use MercurySeries\FlashyBundle\FlashyNotifier;
@@ -78,6 +79,40 @@ class ProduitbouController extends Controller
 
         ));
     }
+    /**
+     * Lists produitbou entities.
+     *
+     * @Route("/searchPPS", name="produit_searchPPS")
+     * @Method("GET")
+     */
+
+    public function RecherchePPSAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+
+        if($request->isMethod("GET"))
+        {
+            $key = $request->get('search1');
+            if ($key !== '') {
+                $store = $em->getRepository('GeneralBundle:Store')->findBy(array('nom' => $key ));
+                $produitbous = $em->getRepository('GeneralBundle:Produitbou')->findBy(array('idStore' => $store));
+            }
+
+
+        }
+        $paginator= $this->get('knp_paginator');
+        $result=$paginator->paginate(
+            $produitbous,
+            $request->query->getInt('page', 1), /*page number*/
+            $request->query->getInt('limit',5) /*limit per page*/
+        );
+
+        return $this->render('produitbou/searchPPS.html.twig', array(
+            'produitbous' => $result,
+
+        ));
+    }
 
     /**
      * @Route("/asearch",name="ajax_search")
@@ -87,9 +122,9 @@ class ProduitbouController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $requestString = $request->get('q');
-        $posts =  $em->getRepository('GeneralBundle:Produitbou')->findOneBy(array('Nom',$requestString));
+        $posts =  $em->getRepository('GeneralBundle:Produitbou')->findEntitiesByString($requestString);
         if(!$posts) {
-            $result['posts']['error'] = "Post Not found :( ";
+            $result['posts']['error'] = "Aucun produit avec ce nom :( ";
         } else {
             $result['posts'] = $this->getRealEntities($posts);
         }

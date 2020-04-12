@@ -164,7 +164,7 @@
                     </form>
                     <ul class="nav" id="side-menu">
                         <li>
-                            <a href="#"> Entities<span class="fa arrow"></span></a>
+                            <a href="#"><span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level" id="entitiesNav">
                             </ul>
                         </li>
@@ -199,7 +199,7 @@
                                                         if (key === 'posts') {
                                                             if (id !== 'error') {
                                                                 console.log(value[1]);
-                                                                entitySelector.append('<li><b>'+value[1]+'</b><a href="/afficherP/'+id+'">'+value[0]+'" style="width: 50px; height: 50px"/>'+'</a></li>');
+                                                                entitySelector.append('<li><b>'+value[0]+'</b><a href="/general/produitbou/'+id+'/afficher">'+value[1]+'</a></li>');
                                                             } else {
                                                                 entitySelector.append('<li class="errorLi">'+value+'</li>');
                                                             }

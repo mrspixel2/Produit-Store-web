@@ -2,12 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9890f85-de66-4cfb-ba3e-28a50e2c7b7e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/images/127e4c22c87779145b639d456466aeee.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Resources/views/produitbou/searchPPS.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/c58d8f9b5f7d57f44dbc862dc72c8a45.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/produitbou/bikes.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/produitbou/bikes.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/produitbou/gears.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/produitbou/gears.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/produitbou/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/produitbou/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/produitbou/searchP.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/produitbou/searchP.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GeneralBundle/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneralBundle/Controller/DefaultController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GeneralBundle/Controller/ProduitbouController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneralBundle/Controller/ProduitbouController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GeneralBundle/Repository/ProduitbouRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneralBundle/Repository/ProduitbouRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GeneralBundle/Repository/StoreRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneralBundle/Repository/StoreRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GeneralBundle/Resources/config/routing/produit.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneralBundle/Resources/config/routing/produit.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -194,7 +199,7 @@
       <workItem from="1586567165837" duration="13372000" />
       <workItem from="1586586587952" duration="9100000" />
       <workItem from="1586650073588" duration="15467000" />
-      <workItem from="1586672248356" duration="5973000" />
+      <workItem from="1586672248356" duration="15949000" />
     </task>
     <servers />
   </component>
@@ -236,25 +241,25 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="465" y="261" key="FrameworkEditDialogDimensionKey/0.0.1366.728@0.0.1366.728" timestamp="1586509774502" />
-    <state width="1323" height="92" key="GridCell.Tab.0.bottom" timestamp="1586678436496">
+    <state width="1323" height="92" key="GridCell.Tab.0.bottom" timestamp="1586689805123">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="92" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586678436496" />
+    <state width="1323" height="92" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586689805123" />
     <state width="1323" height="192" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1585409796669" />
-    <state width="1323" height="92" key="GridCell.Tab.0.center" timestamp="1586678436496">
+    <state width="1323" height="92" key="GridCell.Tab.0.center" timestamp="1586689805123">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="92" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586678436496" />
+    <state width="1323" height="92" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586689805123" />
     <state width="1323" height="192" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1585409796668" />
-    <state width="1323" height="92" key="GridCell.Tab.0.left" timestamp="1586678436495">
+    <state width="1323" height="92" key="GridCell.Tab.0.left" timestamp="1586689805123">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="92" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586678436495" />
+    <state width="1323" height="92" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586689805123" />
     <state width="1323" height="192" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1585409796668" />
-    <state width="1323" height="92" key="GridCell.Tab.0.right" timestamp="1586678436496">
+    <state width="1323" height="92" key="GridCell.Tab.0.right" timestamp="1586689805123">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="92" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586678436496" />
+    <state width="1323" height="92" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586689805123" />
     <state width="1323" height="192" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1585409796669" />
     <state x="263" y="100" key="IDE.errors.dialog" timestamp="1586220062740">
       <screen x="0" y="0" width="1366" height="728" />
@@ -279,10 +284,10 @@
     </state>
     <state x="391" y="200" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586672276083" />
     <state x="391" y="211" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1585401539701" />
-    <state x="621" y="31" width="672" height="642" key="run.anything.popup" timestamp="1586672542845">
+    <state x="621" y="31" width="672" height="642" key="run.anything.popup" timestamp="1586680215770">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="621" y="31" width="672" height="642" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1586672542845" />
+    <state x="621" y="31" width="672" height="642" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1586680215770" />
     <state x="339" y="172" width="672" height="677" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1585409796687" />
     <state x="346" y="84" width="672" height="643" key="search.everywhere.popup" timestamp="1585778421476">
       <screen x="0" y="0" width="1366" height="728" />
@@ -295,7 +300,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Resources/views/produitbou/index.html.twig</url>
-          <line>131</line>
+          <line>144</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -305,7 +310,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Resources/views/produitbou/index.html.twig</url>
-          <line>123</line>
+          <line>136</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
