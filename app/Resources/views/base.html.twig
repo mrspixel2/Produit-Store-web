@@ -159,9 +159,63 @@
                                 <option value="#">Rim Tape</option>
                             </select>
                         </label>
-                        <input name="search" type="text" class="tz-query" id="tz-query" value="" placeholder="Search for product">
+                        <input  name="search" type="text" class="tz-query" id="tz-query" value="" placeholder="Search for product">
                         <button type="submit"></button>
                     </form>
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <a href="#"> Entities<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level" id="entitiesNav">
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+                    <script type="text/javascript">
+                        jQuery(document).ready(function() {
+                            var searchRequest = null;
+                            $("#tz-query").keyup(function() {
+                                var minlength = 1;
+                                var that = this;
+                                var value = $(this).val();
+                                var entitySelector = $("#entitiesNav").html('');
+                                if (value.length >= minlength ) {
+                                    if (searchRequest != null)
+                                        searchRequest.abort();
+                                    searchRequest = $.ajax({
+                                        type: "GET",
+                                        url: "{{ path('ajax_search') }}",
+                                        data: {
+                                            'key' : value
+                                        },
+                                        dataType: "text",
+                                        success: function(msg){
+                                            //we need to check if the value is the same
+                                            if (value===$(that).val()) {
+                                                var result = JSON.parse(msg);
+                                                $.each(result, function(key, arr) {
+                                                    $.each(arr, function(id, value) {
+                                                        if (key === 'posts') {
+                                                            if (id !== 'error') {
+                                                                console.log(value[1]);
+                                                                entitySelector.append('<li><b>'+value[1]+'</b><a href="/afficherP/'+id+'">'+value[0]+'" style="width: 50px; height: 50px"/>'+'</a></li>');
+                                                            } else {
+                                                                entitySelector.append('<li class="errorLi">'+value+'</li>');
+                                                            }
+                                                        }
+                                                    });
+                                                });
+                                            }
+                                        }
+                                    });
+                                }
+                            });
+                        });
+                    </script>
+
+
+
                     <!--End Form search-->
 
                     <!--live search-->

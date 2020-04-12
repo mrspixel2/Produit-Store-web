@@ -64,6 +64,11 @@ produit_rating:
   path:     /rating
   defaults: { _controller: GeneralBundle:Rating:rating }
 
+ajax_search:
+  path: /asearch
+  defaults: { _controller: GeneralBundle:Produitbou:search}
+  methods: [GET, POST]
+
 
 
 
