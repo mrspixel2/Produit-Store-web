@@ -60,6 +60,10 @@ produit_gears:
   defaults: { _controller: "GeneralBundle:Produitbou:Gears"}
   methods: [GET, POST]
 
+produit_rating:
+  path:     /rating
+  defaults: { _controller: GeneralBundle:Rating:rating }
+
 
 
 

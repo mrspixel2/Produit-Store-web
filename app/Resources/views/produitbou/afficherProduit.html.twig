@@ -45,13 +45,49 @@
                     <!--Shop content-->
                     <div class="entry-summary">
                         <h1>{{ produitbou.nom }}</h1>
-                        <span class="p-vote">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-half-o"></i>
-                        </span>
+                        <div class="pc-meta">
+                        <div class="rating" id="#rat">
+                            {% if is_granted('ROLE_USER') %}
+                                {% for i in 1.. rat %}
+                                    <i class="fa fa-star" width="20px" data-index="{{ i }}" onclick="rating({{ i }},{{ produitbou.id }})"></i>
+                                {% endfor %}
+                                {% if  rat  < 5 %}
+                                    {% for i in rat..4 %}
+                                        <i class="fa fa-star" aria-hidden="true" style="color: white" data-index="{{ i }}" onclick="rating({{ i+1 }},{{ produitbou.id }})" width="20px"></i>
+                                    {% endfor %}
+                                {% endif %}
+                            {% else %}
+                                {% for i in 1..rat %}
+                                    <i class="fa fa-star" width="20px"></i>
+                                {% endfor %}
+                                {% if rat < 5 %}
+                                    {% for i in rat..4 %}
+                                        <i class="fa fa-star" width=20px"></i>
+                                    {% endfor %}
+                                {% endif %}
+                            {% endif %}
+                        </div>
+                            <script>
+                                $(document).ready(function(){
+                                    $('.fa-star').mouseover(function(){
+                                        resetStarColors();
+                                        var currentIndex = parseInt($(this).data('index'));
+                                        for (var i=0; i <= currentIndex; i++)
+                                        {
+                                            $('.fa-star:eq('+i+')').css('color', 'yellow');
+                                        }
+
+                                    });
+                                    $('.fa-star').mouseleave(function(){
+
+                                    });
+                                });
+                                function resetStarColors(){
+                                    $('.fa-star').css('color', 'white');
+                                }
+
+                            </script>
+                        </div>
                         <p class="product-price">
                             <span class="price">${{ produitbou.prix }}</span>
                             <span class="stock">Availability:  <span>{{ produitbou.qtetotal }}</span></span>
@@ -87,7 +123,36 @@
 
             </div>
         </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            function rating(pos,id){
+                $.ajax({
+                    type: "GET",
+                    url :  "{{ path('produit_rating') }}",
+                    data: {
+                        'rat' : pos,
+                        'id':id
+                    },
+                    success: function(){
+                        $(".rating").empty();
+                        for (var i=0; i<pos; i++) {
+                            $(".rating").append('' +
+                                '<img src="C:/wamp64/www/PIDEV1/web/client/img/star-solid.svg" width="20px">'
+                            );
+                        }
+                        if(pos<5){
+                            for (var i=pos ;i<5;i++)
+                                $(".rating").append('' +
+                                    '<img src="C:/wamp64/www/PIDEV1/web/client/img/star-regular.svg" width="20px" >'
+                                );
+                        }
 
+                    }
+                });
+
+            }
+
+        </script>
         <!--Shop tabs-->
         <div class="tz-shop-tabs">
             <div class="container">
@@ -119,5 +184,8 @@
 
     </section>
     <!--End Shop single-->
+
+{% endblock %}
+{% block js %}
 
 {% endblock %}

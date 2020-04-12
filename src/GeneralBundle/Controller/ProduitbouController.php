@@ -10,6 +10,9 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Serializer\Encoder\JsonEncoder;
+use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+use Symfony\Component\Serializer\Serializer;
 
 /**
  * Produitbou controller.
@@ -71,6 +74,7 @@ class ProduitbouController extends Controller
 
         return $this->render('produitbou/searchP.html.twig', array(
             'produitbous' => $result,
+
         ));
     }
 
@@ -223,9 +227,50 @@ class ProduitbouController extends Controller
     public function afficherPAction(Produitbou $produitbou)
     {
         $deleteForm = $this->createDeleteForm($produitbou);
+        $authCheker=$this->container->get('security.authorization_checker');
+        $em=$this->getDoctrine()->getManager();
+        $existe=0;
+        $rat=1;
+        $i=1;
+        if ($authCheker->isgranted ('ROLE_USER')){
+            $userid=$this->get('security.token_storage')->getToken()->getUser()->getId();
+            $ratings=$em->getRepository('GeneralBundle:Rating')->findAll();
+            foreach ($ratings as $rating) {
+                if ( (($rating->getProduitbou()->getId()) == $produitbou->getId()) && (($rating->getUser()->getId()) == $userid)  ) {
+                    $existe=1;
+                    $rat=$rating->getRat();
+                }
+            }
+        }
+        if ($existe==0) {
+            $ratings = $em->getRepository('GeneralBundle:Rating')->findAll();
+
+            foreach ($ratings as $rating) {
+                if($rating->getProduitbou()->getId()==$produitbou->getId()){
+                    $rat=$rat+$rating->getRat();
+                    $i=$i+1;
+                }
+            }
+            $rat=$rat / $i;
+            if($rat>1 && $rat<=2){
+                $rat=2;
+            }
+            else if($rat>2 && $rat <= 3){
+                $rat=3;
+            }elseif ($rat>3 && $rat <= 4){
+                $rat=4;
+            }elseif ($rat==1)
+            {
+                $rat=1;
+            }
+            else{
+                $rat=5;
+            }
+        }
 
         return $this->render('produitbou/afficherProduit.html.twig', array(
             'produitbou' => $produitbou,
+            'rat'=>$rat,
             'delete_form' => $deleteForm->createView(),
         ));
     }
