@@ -68,7 +68,12 @@
                             {% endif %}
                         </div>
                             <script>
+
+                                var rateIndex = -1;
                                 $(document).ready(function(){
+                                    $('.fa-star').on('click', function(){
+                                        rateIndex = parseInt($(this).data('index'));
+                                    });
                                     $('.fa-star').mouseover(function(){
                                         resetStarColors();
                                         var currentIndex = parseInt($(this).data('index'));
@@ -79,6 +84,13 @@
 
                                     });
                                     $('.fa-star').mouseleave(function(){
+                                        if(rateIndex = -1)
+                                        {
+                                            for (var i=0; i <= currentIndex; i++)
+                                            {
+                                                $('.fa-star:eq('+i+')').css('color', 'yellow');
+                                            }
+                                        }
 
                                     });
                                 });

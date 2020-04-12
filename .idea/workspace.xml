@@ -2,98 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9890f85-de66-4cfb-ba3e-28a50e2c7b7e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GeneralBundle/Controller/RatingController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GeneralBundle/Entity/Rating.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GeneralBundle/Repository/RatingRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GeneralBundle/Tests/Controller/RatingControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/css/magnific-popup.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/css/nice-select.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/css/owl.carousel.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/css/slicknav.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/fonts/FuturaBT-Book.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/fonts/FuturaBT-Book.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/fonts/FuturaBT-Book.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/fonts/FuturaBT-Book.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/fonts/FuturaBT-Book.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/fonts/fontawesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/add.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/cart/cart-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/f-box-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/f-box-11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/f-box-111.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/f-box-11111.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/f-box-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/f-box-22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/f-box-2222.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/f-box-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/f-box-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/f-box-33.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/icons/bag.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/icons/chat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/icons/coin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/icons/delivery.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/icons/f-delivery.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/icons/man.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/icons/sales.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/icons/search.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/icons/voucher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/icons/zoom-plus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/jpg1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/logoo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/logos/logo-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/logos/logo-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/logos/logo-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/logos/logo-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/logos/logo-5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/lookbok.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/mastercard.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/paypal.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/product/aaaa.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/product/product-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/products/img-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/products/img-10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/products/img-11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/products/img-12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/products/img-13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/products/img-14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/products/img-15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/products/img-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/products/img-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/products/img-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/products/img-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/products/img-7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/products/img-8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/products/img-9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/products/imgbleu.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/slider-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/slider-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/slider-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/star-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/img/star-solid.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/js/jquery-3.3.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/js/jquery.magnific-popup.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/js/jquery.nice-select.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/js/jquery.slicknav.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/js/mixitup.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/js/owl.carousel.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/client/sass/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/produitbou/afficherProduit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/produitbou/afficherProduit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GeneralBundle/Controller/ProduitbouController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneralBundle/Controller/ProduitbouController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GeneralBundle/Resources/config/routing/produit.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneralBundle/Resources/config/routing/produit.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -278,7 +188,8 @@
       <workItem from="1586517139052" duration="4069000" />
       <workItem from="1586567165837" duration="13372000" />
       <workItem from="1586586587952" duration="9100000" />
-      <workItem from="1586650073588" duration="15296000" />
+      <workItem from="1586650073588" duration="15467000" />
+      <workItem from="1586672248356" duration="272000" />
     </task>
     <servers />
   </component>
@@ -320,25 +231,25 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="465" y="261" key="FrameworkEditDialogDimensionKey/0.0.1366.728@0.0.1366.728" timestamp="1586509774502" />
-    <state width="1323" height="92" key="GridCell.Tab.0.bottom" timestamp="1586660329851">
+    <state width="1323" height="92" key="GridCell.Tab.0.bottom" timestamp="1586671933406">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="92" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586660329851" />
+    <state width="1323" height="92" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586671933406" />
     <state width="1323" height="192" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1585409796669" />
-    <state width="1323" height="92" key="GridCell.Tab.0.center" timestamp="1586660329851">
+    <state width="1323" height="92" key="GridCell.Tab.0.center" timestamp="1586671933406">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="92" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586660329851" />
+    <state width="1323" height="92" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586671933406" />
     <state width="1323" height="192" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1585409796668" />
-    <state width="1323" height="92" key="GridCell.Tab.0.left" timestamp="1586660329851">
+    <state width="1323" height="92" key="GridCell.Tab.0.left" timestamp="1586671933405">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="92" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586660329851" />
+    <state width="1323" height="92" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586671933405" />
     <state width="1323" height="192" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1585409796668" />
-    <state width="1323" height="92" key="GridCell.Tab.0.right" timestamp="1586660329851">
+    <state width="1323" height="92" key="GridCell.Tab.0.right" timestamp="1586671933406">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="92" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586660329851" />
+    <state width="1323" height="92" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586671933406" />
     <state width="1323" height="192" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1585409796669" />
     <state x="263" y="100" key="IDE.errors.dialog" timestamp="1586220062740">
       <screen x="0" y="0" width="1366" height="728" />
@@ -358,15 +269,15 @@
     </state>
     <state x="454" y="282" width="461" height="193" key="SymfonyPathDialog/0.0.1366.728@0.0.1366.728" timestamp="1585425726246" />
     <state x="454" y="298" key="SymfonyPathDialog/0.0.1366.768@0.0.1366.768" timestamp="1585141324849" />
-    <state x="391" y="200" key="com.intellij.ide.util.TipDialog" timestamp="1586650305041">
+    <state x="391" y="200" key="com.intellij.ide.util.TipDialog" timestamp="1586672276083">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="391" y="200" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586650305041" />
+    <state x="391" y="200" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586672276083" />
     <state x="391" y="211" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1585401539701" />
-    <state x="621" y="31" width="672" height="642" key="run.anything.popup" timestamp="1586656627866">
+    <state x="621" y="31" width="672" height="642" key="run.anything.popup" timestamp="1586672542845">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="621" y="31" width="672" height="642" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1586656627866" />
+    <state x="621" y="31" width="672" height="642" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1586672542845" />
     <state x="339" y="172" width="672" height="677" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1585409796687" />
     <state x="346" y="84" width="672" height="643" key="search.everywhere.popup" timestamp="1585778421476">
       <screen x="0" y="0" width="1366" height="728" />
