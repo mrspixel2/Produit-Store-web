@@ -29,11 +29,23 @@ class StoreRepository extends \Doctrine\ORM\EntityRepository
     public function findStoreByOwner($idOwner){
         return $this->getEntityManager()
             ->createQuery(
-                'SELECT s
-                FROM GeneralBundle:Store s
-                WHERE s.owner_id LIKE :idOwner'
+                'SELECT s.id, s.nom, s.description
+                FROM GeneralBundle:Store s, GeneralBundle:User u
+                WHERE s.owner = u.id AND u.id LIKE :idOwner'
             )
             ->setParameter('idOwner', '%'.$idOwner.'%')
             ->getResult();
     }
+
+    public function findStores(){
+        return $this->getEntityManager()
+            ->createQuery(
+                'SELECT s.id,s.nom,s.description,u.id, IDENTITY(s.owner)
+                FROM GeneralBundle:Store s JOIN GeneralBundle:User u
+                WHERE s.owner = u.id
+                '
+            )
+            ->getResult();
+    }
+
 }

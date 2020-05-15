@@ -5,7 +5,12 @@ namespace GeneralBundle\Controller;
 use GeneralBundle\Entity\Store;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Serializer\Encoder\JsonEncoder;
+use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+use Symfony\Component\Serializer\Serializer;
 
 /**
  * Store controller.
@@ -63,6 +68,28 @@ class StoreController extends Controller
             'store' => $store,
             'form' => $form->createView(),
         ));
+    }
+
+    /**
+     * @Route("/addstore/{owner}/{nom}/{description}", name="addstore")
+     */
+
+    public function addStoreAction(Request $request, $owner ,$nom, $description){
+        $store = new Store();
+        $user = $this->getDoctrine()->getRepository('GeneralBundle:User')->findOneBy(['id'=> $owner]);
+        $store->setOwner($user);
+        $store->setNom($nom);
+        $store->setDescription($description);
+
+
+        $ex="succes";
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($store);
+        $em->flush();
+
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($ex);
+        return new JsonResponse($formatted);
     }
 
     /**
@@ -126,6 +153,73 @@ class StoreController extends Controller
         }
 
         return $this->redirectToRoute('store_index');
+    }
+
+
+    /**
+     * Lists all store entities.
+     *
+     * @Route("/all/store" , name="store_all")
+     */
+    public function AllStoresAction()
+    {
+        $Stores = $this->getDoctrine()->getManager()
+            ->getRepository('GeneralBundle:Store')
+            ->findStores();
+
+        return new JsonResponse($Stores);
+    }
+
+    /**
+     * Lists all store entities.
+     *
+     * @Route("/getUserStores/{id}" , name="stores_user")
+     */
+    public function getUserStoresAction($id)
+    {
+        $Stores = $this->getDoctrine()->getManager()
+            ->getRepository('GeneralBundle:Store')
+            ->findStoreByOwner($id);
+
+        return new JsonResponse($Stores);
+    }
+
+    /**
+     *
+     * @Route("/all/login" , name="login")
+     */
+    public function loginAction(Request $request)
+    {
+
+        $username = $request->get("nom");
+        $password = $request->get("mdp");
+
+
+        //  $entityManager = $this->getDoctrine()->getManager();
+        //  $user = $this->getUser() ;
+        $user = $this->getDoctrine()->getRepository('GeneralBundle:User')->findOneBy(['username' => $username]);
+        $encoderService = $this->container->get('security.password_encoder');
+        if ($user != null) {
+            $match = $encoderService->isPasswordValid($user, $password);
+            if ($match == true) {
+                $encoder = new JsonEncoder();
+                $normalisers = new ObjectNormalizer();
+                $normalisers->setCircularReferenceHandler(function ($object) {
+                    return $object->getId();
+                });
+                $serializer = new Serializer([$normalisers,$encoder]);
+                $formatted = $serializer->normalize([$user]);
+                return new JsonResponse($formatted);
+            } else {
+                $serializer = new Serializer([new ObjectNormalizer()]);
+                $formatted = $serializer->normalize(null);
+                return new JsonResponse(123);
+            }
+        } else {
+            $serializer = new Serializer([new ObjectNormalizer()]);
+            $formatted = $serializer->normalize(null);
+            return new JsonResponse(123);
+        }
     }
 
 

@@ -97,6 +97,7 @@ class Store
         return $this;
     }
 
+
     /**
      * Get owner
      *
