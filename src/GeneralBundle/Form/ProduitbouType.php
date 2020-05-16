@@ -30,7 +30,7 @@ class ProduitbouType extends AbstractType
             ->add('categorie', ChoiceType::class, [
                 'label' => 'Categorie',
                 'choices'  => [
-                    'Vélo' => 'bike',
+                    'Velo' => 'bike',
                     'Accessoires' => 'accessories',
                     'Autre' => 'other',
                 ],

@@ -4,12 +4,14 @@ namespace GeneralBundle\Controller;
 
 use Doctrine\ORM\Mapping\OrderBy;
 use GeneralBundle\Entity\Produitbou;
+use GeneralBundle\Entity\Store;
 use GeneralBundle\Form\ProduitbouType;
 use MercurySeries\FlashyBundle\FlashyNotifier;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
@@ -138,6 +140,7 @@ class ProduitbouController extends Controller
         return $realEntities;
     }
 
+
     /**
      * Lists all produitbou entities.
      *
@@ -260,6 +263,41 @@ class ProduitbouController extends Controller
             'produitbou' => $produit,
             'form' => $form->createView(),
         ));
+    }
+
+    /**
+     * @Route("/addproduit/add", name="addproduit")
+     */
+
+    public function addProduitAction(Request $request){
+
+        $store = $request->get("store");
+        $nom = $request->get("nom");
+        $description = $request->get("description");
+        $prix = $request->get("prix");
+        $qte = $request->get("qte");
+        $catg = $request->get("catg");
+        $img = $request->get("img");
+        $produit = new Produitbou();
+        $Store = $this->getDoctrine()->getRepository('GeneralBundle:Store')->findOneBy(['nom'=> $store]);
+        $produit->setIdStore($Store);
+        $produit->setNom($nom);
+        $produit->setDescription($description);
+        $produit->setPrix($prix);
+        $produit->setQtetotal($qte);
+        $produit->setCategorie($catg);
+        $produit->setImage($img);
+
+
+
+        $ex="succes";
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($produit);
+        $em->flush();
+
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($ex);
+        return new JsonResponse($formatted);
     }
 
     /**
