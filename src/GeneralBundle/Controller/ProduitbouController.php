@@ -10,6 +10,8 @@ use MercurySeries\FlashyBundle\FlashyNotifier;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -25,6 +27,16 @@ use Symfony\Component\Serializer\Serializer;
  */
 class ProduitbouController extends Controller
 {
+
+    public $nom ;
+
+    /**
+     * @param mixed $nom
+     */
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+    }
     /**
      * Lists all produitbou entities.
      *
@@ -266,11 +278,9 @@ class ProduitbouController extends Controller
     }
 
     /**
-     * @Route("/addproduit/add", name="addproduit")
+     * @Route("/addproduits/add", name="addprod")
      */
-
     public function addProduitAction(Request $request){
-
         $store = $request->get("store");
         $nom = $request->get("nom");
         $description = $request->get("description");
@@ -287,6 +297,7 @@ class ProduitbouController extends Controller
         $produit->setQtetotal($qte);
         $produit->setCategorie($catg);
         $produit->setImage($img);
+        $this->setNom($request->get('img'))  ;
 
 
 
@@ -298,6 +309,39 @@ class ProduitbouController extends Controller
         $serializer = new Serializer([new ObjectNormalizer()]);
         $formatted = $serializer->normalize($ex);
         return new JsonResponse($formatted);
+    }
+
+
+    /**
+     * @Route("/addproduit/add/img", name="addimagee")
+     */
+    public function imgAction(Request $request)
+    {
+        $photo=$request->get('photo');
+        $nom = $request->get("nom");
+        $fich = $request->files->get($photo);
+        //  $new_name = rand() . '.' . $fich->getClientOriginalExtension();
+         $fich->copy($this->getParameter('Produitbou'),$nom);
+         $serializer = new Serializer([new ObjectNormalizer()]) ;
+         $formatted = $serializer->normalize($photo) ;
+         return new JsonResponse($formatted) ;
+
+    }
+
+    /**
+     * Lists all produits entities.
+     *
+     * @Route("/all/produits" , name="produits_all")
+     */
+    public function AllProduitbousAction()
+    {
+        $Produits = $this->getDoctrine()->getManager()
+            ->getRepository('GeneralBundle:Produitbou')
+            ->findProducts();
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($Produits);
+
+        return new JsonResponse($Produits);
     }
 
     /**

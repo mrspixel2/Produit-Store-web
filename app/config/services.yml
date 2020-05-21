@@ -2,7 +2,9 @@
 # https://symfony.com/doc/current/service_container.html
 parameters:
     image_directory: '%kernel.project_dir%/web/images'
+    Produitbou: '%kernel.project_dir%/web/uploads/Produitbou'
     #parameter_name: value
+
 
 
 

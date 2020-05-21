@@ -24,6 +24,21 @@ class ProduitbouRepository extends \Doctrine\ORM\EntityRepository
 
     }
 
+    /**
+     * @return mixed
+     */
+    public function findProducts()
+    {
+        return $this->getEntityManager()
+            ->createQuery(
+                'SELECT p.id, p.nom, p.description, p.prix, p.qtetotal, p.categorie, p.image, IDENTITY(p.idStore)
+                      FROM GeneralBundle:Produitbou p JOIN GeneralBundle:Store s
+                      WHERE p.idStore = s.id
+                   '
+            )
+            ->getArrayResult();
+    }
+
 
 
 
