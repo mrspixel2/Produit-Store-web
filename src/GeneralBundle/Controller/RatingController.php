@@ -5,8 +5,12 @@ namespace GeneralBundle\Controller;
 use GeneralBundle\Entity\Rating;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+use Symfony\Component\Serializer\Serializer;
+
 class RatingController extends Controller
 {
     /**
@@ -43,9 +47,44 @@ class RatingController extends Controller
         }
         return $this->redirectToRoute('produitbou/afficherProduit.html.twig');
         // return $this->render('@Produit/Default/clientViews/index.html.twig', array('existe' => $existe));
-
-
-
-
     }
+
+    /**
+     * @Route("/rating/add", name="add_rating")
+     */
+    public function addRatingAction(Request $request){
+
+        $produit = $request->get('idproduit');
+        $user = $request->get('iduser');
+        $rate = $request->get('rate');
+        $rating = new Rating();
+        $Produit = $this->getDoctrine()->getRepository('GeneralBundle:Produitbou')->findOneBy(['id'=> $produit]);
+        $User = $this->getDoctrine()->getRepository('GeneralBundle:User')->findOneBy(['id'=> $user]);
+        $rating->setProduitbou($Produit);
+        $rating->setUser($User);
+        $rating->setRat($rate);
+        $ex="succes";
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($rating);
+        $em->flush();
+
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($ex);
+        return new JsonResponse($formatted);
+    }
+
+    /**
+     * @Route("/rating/prod", name="get_rating")
+     */
+    public function getRatingAction(Request $request){
+
+        $produit = $request->get('idproduit');
+        $Produit = $this->getDoctrine()->getRepository('GeneralBundle:Produitbou')->findOneBy(['id'=> $produit]);
+        $rat = $this->getDoctrine()->getRepository('GeneralBundle:Rating')->findproduitrate($Produit);
+
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($rat);
+        return new JsonResponse($formatted);
+    }
+
 }

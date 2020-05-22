@@ -173,6 +173,20 @@ class StoreController extends Controller
     /**
      * Lists all store entities.
      *
+     * @Route("/all/storee" , name="stores")
+     */
+    public function AllStores1Action()
+    {
+        $Stores = $this->getDoctrine()->getManager()
+            ->getRepository('GeneralBundle:Store')
+            ->findStores1();
+
+        return new JsonResponse($Stores);
+    }
+
+    /**
+     * Lists all store entities.
+     *
      * @Route("/getUserStores/{id}" , name="stores_user")
      */
     public function getUserStoresAction($id)

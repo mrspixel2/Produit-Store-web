@@ -16,4 +16,19 @@ class RatingRepository extends \Doctrine\ORM\EntityRepository
         return $this->getEntityManager()->createQuery(
             "SELECT r FROM ProduitBundle:Rating r  ")->getResult();
     }
+
+    /**
+     * @param $key
+     * @return mixed
+     */
+    public function findproduitrate($key){
+        return $this->getEntityManager()->createQuery(
+            "SELECT AVG(r.rat)
+             FROM GeneralBundle:Rating r
+             WHERE r.produitbou = :key")
+            ->setParameter('key',$key)
+            ->getResult();
+
+    }
+
 }

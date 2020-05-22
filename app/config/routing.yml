@@ -6,6 +6,10 @@ general_produitbou:
     resource: "@GeneralBundle/Controller/ProduitbouController.php"
     type:     annotation
 
+general_rating:
+    resource: "@GeneralBundle/Controller/RatingController.php"
+    type:     annotation
+
 espace_client:
     resource: "@EspaceClientBundle/Resources/config/routing.yml"
     prefix:   /

@@ -3,10 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="a9890f85-de66-4cfb-ba3e-28a50e2c7b7e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/services.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/services.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routing.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GeneralBundle/Controller/ProduitbouController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneralBundle/Controller/ProduitbouController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GeneralBundle/Entity/Produitbou.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneralBundle/Entity/Produitbou.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GeneralBundle/Controller/RatingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneralBundle/Controller/RatingController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GeneralBundle/Controller/StoreController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneralBundle/Controller/StoreController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GeneralBundle/Repository/ProduitbouRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneralBundle/Repository/ProduitbouRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GeneralBundle/Repository/RatingRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneralBundle/Repository/RatingRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GeneralBundle/Repository/StoreRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneralBundle/Repository/StoreRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GeneralBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GeneralBundle/Resources/config/routing.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -208,6 +212,7 @@
       <workItem from="1589756428314" duration="11988000" />
       <workItem from="1589777550752" duration="139000" />
       <workItem from="1590014553322" duration="8286000" />
+      <workItem from="1590104708338" duration="12331000" />
     </task>
     <servers />
   </component>

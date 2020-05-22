@@ -48,4 +48,15 @@ class StoreRepository extends \Doctrine\ORM\EntityRepository
             ->getResult();
     }
 
+    public function findStores1(){
+        return $this->getEntityManager()
+            ->createQuery(
+                'SELECT s.id,s.nom,s.description, IDENTITY(s.owner)
+                FROM GeneralBundle:Store s JOIN GeneralBundle:User u
+                WHERE s.owner = u.id
+                '
+            )
+            ->getResult();
+    }
+
 }

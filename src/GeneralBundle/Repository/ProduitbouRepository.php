@@ -14,19 +14,22 @@ class ProduitbouRepository extends \Doctrine\ORM\EntityRepository
      * @param $nom
      * @return mixed
      */
-    public function findByNom($nom){
-        return $this->createQueryBuilder('p')
-            ->andWhere('p.nom like :val')
-            ->setParameter('val','%'.$nom.'%')
-            ->orderBy('p.id' , 'ASC')
-            ->getQuery()
-            ->getResult();
-
+    public function searchProduit($nom)
+    {
+        return $this->getEntityManager()
+            ->createQuery(
+                'SELECT p.id, p.nom, p.description, p.prix, p.qtetotal, p.categorie, p.image, IDENTITY(p.idStore)
+                      FROM GeneralBundle:Produitbou p JOIN GeneralBundle:Store s
+                      WHERE p.idStore = s.id AND p.nom LIKE :nom
+                   '
+            )
+            ->setParameter('nom','%'.$nom.'%')
+            ->getArrayResult();
     }
 
     /**
-     * @return mixed
-     */
+ * @return mixed
+ */
     public function findProducts()
     {
         return $this->getEntityManager()
@@ -38,6 +41,7 @@ class ProduitbouRepository extends \Doctrine\ORM\EntityRepository
             )
             ->getArrayResult();
     }
+
 
 
 

@@ -4,6 +4,7 @@ namespace GeneralBundle\Controller;
 
 use Doctrine\ORM\Mapping\OrderBy;
 use GeneralBundle\Entity\Produitbou;
+use GeneralBundle\Entity\Rating;
 use GeneralBundle\Entity\Store;
 use GeneralBundle\Form\ProduitbouType;
 use MercurySeries\FlashyBundle\FlashyNotifier;
@@ -297,18 +298,28 @@ class ProduitbouController extends Controller
         $produit->setQtetotal($qte);
         $produit->setCategorie($catg);
         $produit->setImage($img);
-        $this->setNom($request->get('img'))  ;
-
-
-
+        $this->setNom($request->get('img'));
         $ex="succes";
         $em = $this->getDoctrine()->getManager();
         $em->persist($produit);
         $em->flush();
-
+        $this->addRatingAction($nom,1);
         $serializer = new Serializer([new ObjectNormalizer()]);
         $formatted = $serializer->normalize($ex);
         return new JsonResponse($formatted);
+    }
+
+    public function addRatingAction($produit,$user){
+
+        $rating = new Rating();
+        $Produit = $this->getDoctrine()->getRepository('GeneralBundle:Produitbou')->findOneBy(['nom'=> $produit]);
+        $User = $this->getDoctrine()->getRepository('GeneralBundle:User')->findOneBy(['id'=> $user]);
+        $rating->setProduitbou($Produit);
+        $rating->setUser($User);
+        $rating->setRat(0);
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($rating);
+        $em->flush();
     }
 
 
@@ -343,6 +354,43 @@ class ProduitbouController extends Controller
 
         return new JsonResponse($Produits);
     }
+
+    /**
+     * Lists all produits entities.
+     *
+     * @Route("/storee/produits" , name="produitsbystore")
+     */
+    public function ProduitsByStoreAction(Request $request)
+    {
+        $store = $request->get('store');
+        $Store = $this->getDoctrine()->getRepository('GeneralBundle:Store')->findOneBy(['id'=> $store]);
+        $Produits = $this->getDoctrine()->getManager()
+            ->getRepository('GeneralBundle:Produitbou')
+            ->findBy(array('idStore' => $Store));
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($Produits);
+
+        return new JsonResponse($formatted);
+    }
+
+    /**
+     * Lists search entities.
+     *
+     * @Route("/search/produit" , name="produitsearch")
+     */
+    public function SearchProduitAction(Request $request)
+    {
+        $key = $request->get('search');
+        $Produits = $this->getDoctrine()->getManager()
+            ->getRepository('GeneralBundle:Produitbou')
+            ->findBy(array('nom'=> $key));
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($Produits);
+
+        return new JsonResponse($formatted);
+    }
+
+
 
     /**
      * Finds and displays a produitbou entity.

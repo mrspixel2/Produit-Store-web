@@ -5,3 +5,7 @@ produitbou_Espace:
 produitbou_homepage:
   path:     /
   defaults: { _controller: GeneralBundle:Default:index }
+
+rating:
+  resource: "@GeneralBundle/Resources/config/routing/produit.yml"
+  prefix:   /rating
