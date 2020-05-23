@@ -232,7 +232,6 @@ class ProduitbouController extends Controller
     }
 
 
-
     public function produitsEnReptureDeStockAction(Request $request){
         $em=$this->getDoctrine()->getManager();
 
