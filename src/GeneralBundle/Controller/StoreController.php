@@ -3,6 +3,7 @@
 namespace GeneralBundle\Controller;
 
 use GeneralBundle\Entity\Store;
+use GeneralBundle\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -234,6 +235,44 @@ class StoreController extends Controller
             $formatted = $serializer->normalize(null);
             return new JsonResponse(123);
         }
+    }
+
+
+    /**
+     *
+     * @Route("/all/register" , name="register")
+     */
+    public function inscriptionAction(Request $req)
+    {
+        $encoderService = $this->container->get('security.password_encoder');
+        $email = $req->get('email');
+        $username = $req->get('username');
+        $pass = $req->get('pass');
+
+        if(isset($email,$username,$pass)){
+            $user = new User();
+
+            $user->setUsername($username);
+            $user->setUsernameCanonical(strtolower($username));
+            $user->setEmail($email);
+            $user->setEmailCanonical(strtolower($email));
+            $user->setEnabled(true);
+            $encoded = $encoderService->encodePassword($user, $pass);
+            $user->setPassword($encoded);
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($user);
+            $em->flush();
+            $ret=$user;
+
+        }
+        else{
+            $ret = 'information incomplete';
+        }
+
+        $ser = new Serializer([new ObjectNormalizer()]);
+        $json = $ser->normalize($ret);
+        return new JsonResponse($json);
+
     }
 
 
